@@ -1,0 +1,17 @@
+{
+  "pages": {
+    "landing": {
+      "slogan": "Pazarı değiştir, senkronla geleceği yakala."
+    }
+  },
+  "languages": {
+    "english": "İngilizce",
+    "turkish": "Türkçe"
+  },
+  "changeLanguage": "Dili Değiştir",
+  "hello": "Merhaba",
+  "buttons": {
+    "close": "Kapat",
+    "open": "Aç"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "pages": {
+    "landing": {
+      "slogan": "Disrupt the Market, One Sync at a Time."
+    }
+  },
+  "languages": {
+    "english": "English",
+    "turkish": "Turkish"
+  },
+  "changeLanguage": "Change Language",
+  "hello": "Hello",
+  "buttons": {
+    "close": "Close",
+    "open": "Open"
+  }
+}
