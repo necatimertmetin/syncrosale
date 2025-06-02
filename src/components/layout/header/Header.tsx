@@ -5,6 +5,7 @@ import {
   IconButton,
   Divider,
   Stack,
+  Typography,
 } from "@mui/material";
 import { ThemeToggle } from "./components/ThemeToggle";
 import LanguageSwitch from "./components/LanguageSwitch";
@@ -30,6 +31,7 @@ export const Header = () => {
       >
         <Stack direction={"row"} alignItems={"center"} spacing={2}>
           <img src={syncrosale} style={{ height: "48px" }} />
+          <Typography variant="h4">Syncrosale</Typography>
         </Stack>
 
         <Box
