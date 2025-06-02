@@ -58,23 +58,24 @@ export const Landing = () => {
             borderRadius: 5,
           }}
         >
-          “ Working with Julian was a transformative experience. Their eye for
-          detail and ability to create mesmerizing visual patterns are
-          unmatched. Every piece brought new depth and fascination. ”
+          “ At Syncrosale, we don’t just build products — we create moments of
+          synchronicity between vision and execution. Our mission is to empower
+          bold thinkers and reshape the way innovation connects with real-world
+          impact. ”
         </Typography>
 
         <Stack direction={"row"} alignItems={"center"} spacing={2}>
           <Avatar
-            alt="Julian Carter"
+            alt="Sarper Celebi"
             src="/assets/julian-avatar.jpg" // Görsel yolunu buraya ekle
             sx={{ width: 96, height: 96 }}
           />
           <Box>
             <Typography variant="h5" fontWeight="medium" gutterBottom>
-              Julian Carter
+              Sarper Celebi
             </Typography>
             <Typography variant="body1" color="text.secondary">
-              Visual Designer @ Visionary Lab
+              Founder & CEO, Syncrosale
             </Typography>
           </Box>
         </Stack>
