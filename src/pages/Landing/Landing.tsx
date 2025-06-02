@@ -6,7 +6,7 @@ export const Landing = () => {
   const theme = useTheme();
   return (
     <Box>
-      <BackgroundLight intensity={0.3} />
+      <BackgroundLight intensity={0.7} />
       <BackgroundLight
         color={theme.palette.secondary.main}
         intensity={0.1}
