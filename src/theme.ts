@@ -50,6 +50,10 @@ const LightTheme = createTheme({
       main: "#f0f8ff",
     },
   },
+  typography: {
+    fontFamily: `"Space Grotesk", "Montserrat", sans-serif`,
+  },
+
   components: {
     MuiTypography: {
       defaultProps: {
@@ -57,7 +61,7 @@ const LightTheme = createTheme({
       },
       styleOverrides: {
         root: {
-          color: "#222222", // açık tema için yazı rengi koyu
+          color: "#111111", // açık tema için yazı rengi koyu
         },
       },
     },
@@ -164,7 +168,7 @@ const DarkTheme = createTheme({
     },
     MuiTypography: {
       defaultProps: {
-        fontFamily: `"Space Grotesk", sans-serif`,
+        fontFamily: `"Space Grotesk", "Montserrat", sans-serif`,
       },
     },
   },
