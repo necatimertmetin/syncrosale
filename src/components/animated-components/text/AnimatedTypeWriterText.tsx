@@ -13,7 +13,7 @@ interface AnimatedTypewriterTextProps {
 export const AnimatedTypewriterText = ({
   text,
   variant = "body1",
-  fontSize = "1.5rem",
+  fontSize,
   fontWeight = 400,
   delayPerChar = 0.03,
   start = true,

@@ -40,12 +40,13 @@ export const AnimatedSplitText: React.FC<AnimatedSplitTextProps> = ({
           }}
           sx={{
             display: "inline-block",
-            fontSize: fontSize, // optional override
+            fontSize: fontSize,
             fontWeight: fontWeight,
             color: theme.palette.text.primary,
+            whiteSpace: "pre", // boşlukları koru
           }}
         >
-          {letter}
+          {letter === " " ? "\u00A0" : letter}
         </MotionTypography>
       ))}
     </Box>

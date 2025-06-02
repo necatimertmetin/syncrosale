@@ -42,7 +42,7 @@ export const Hero = () => {
       >
         <Stack spacing={2} maxWidth={{ xs: "100%", md: 490 }}>
           <AnimatedSplitText text="Syncrosale" variant="h2" />
-          <AnimatedTypewriterText text={translate("slogan")} />
+          <AnimatedTypewriterText text={translate("slogan")} variant="h6" />
           <Typography variant="h6" fontWeight={200}></Typography>
           <Stack
             direction={{ xs: "column", sm: "row" }}
