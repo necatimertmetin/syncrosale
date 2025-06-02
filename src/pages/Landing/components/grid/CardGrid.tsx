@@ -19,7 +19,7 @@ export const CardGrid = () => {
           sx={{ display: "flex" }}
         >
           <Paper
-            elevation={3}
+            elevation={1}
             sx={{
               borderRadius: 3,
               p: 3,

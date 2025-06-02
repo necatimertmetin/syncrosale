@@ -5,7 +5,13 @@ import { Footer } from "./footer/Footer";
 
 export const PageLayout = () => {
   return (
-    <Box>
+    <Box
+      sx={{
+        position: "relative",
+        backgroundColor: (theme) => theme.palette.background.default,
+        zIndex: 0,
+      }}
+    >
       <Header />
       <Box>
         <Outlet />

@@ -32,9 +32,12 @@ const LightTheme = createTheme({
       dark: "#A84300",
       contrastText: "#fff", // primary button yazısı için
     },
+    secondary: {
+      main: "#26C6DA", // açık turkuaz-mavi ton, canlı ve soft
+    },
     background: {
-      default: "#fff",
-      paper: "#fff",
+      default: "#d6d6d6", // orta açık gri, beyaza çok yakın değil
+      paper: "#eee", // defaulttan biraz daha koyu ama hâlâ açık ton
     },
     text: {
       primary: "#222222", // koyu gri - ana yazı
@@ -107,6 +110,9 @@ const DarkTheme = createTheme({
       main: "#FF6F00",
       light: "#FFA040",
       dark: "#C43E00",
+    },
+    secondary: {
+      main: "#00BFA5 ",
     },
     background: {
       default: "#0d0d0d",
