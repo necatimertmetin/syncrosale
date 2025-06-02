@@ -20,9 +20,6 @@ export const ReportsAnimation: React.FC = () => {
     { id: 2, height: 60, label: "15:05" },
     { id: 3, height: 40, label: "15:10" },
     { id: 4, height: 30, label: "15:15" },
-    { id: 5, height: 20, label: "15:20" },
-    { id: 6, height: 10, label: "15:25" },
-    { id: 7, height: 50, label: "15:30" },
   ]);
 
   const nextId = useRef(8);
