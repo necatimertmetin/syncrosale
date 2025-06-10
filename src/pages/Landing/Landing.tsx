@@ -6,7 +6,7 @@ import { AnimatedSplitText } from "../../components/animated-components/text/Ani
 export const Landing = () => {
   const theme = useTheme();
   return (
-    <Box>
+    <Box sx={{ overflow: "hidden" }}>
       <BackgroundLight intensity={0.7} />
       <BackgroundLight
         color={theme.palette.secondary.main}
