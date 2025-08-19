@@ -1,5 +1,5 @@
 import { Button, Grid, Stack, Typography, useTheme } from "@mui/material";
-import syncrosale from "../../../assets/Syncrosale.png";
+import syncrosale from "../../../assets/logo.png";
 import { AnimatedTypewriterText } from "../../../components/animated-components/text/AnimatedTypeWriterText";
 import { AnimatedSplitText } from "../../../components/animated-components/text/AnimatedSplitText";
 import { motion } from "framer-motion";

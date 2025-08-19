@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: true, // veya host: '0.0.0.0'
-    port: 5173, // istersen portu buradan belirle
+    port: 5174, // istersen portu buradan belirle
   },
 });

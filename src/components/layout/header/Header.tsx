@@ -11,7 +11,7 @@ import { ThemeToggle } from "./components/ThemeToggle";
 import LanguageSwitch from "./components/LanguageSwitch";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import syncrosale from "../../../assets/Syncrosale.png";
+import syncrosale from "../../../assets/logo.png";
 export const Header = () => {
   return (
     <AppBar
