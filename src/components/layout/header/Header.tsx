@@ -1,17 +1,10 @@
-import {
-  AppBar,
-  Toolbar,
-  Box,
-  IconButton,
-  Divider,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { AppBar, Toolbar, Box, Stack, Typography, Button } from "@mui/material";
 import { ThemeToggle } from "./components/ThemeToggle";
 import LanguageSwitch from "./components/LanguageSwitch";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { Link as RouterLink } from "react-router-dom"; // Link import
 import syncrosale from "../../../assets/logo.png";
+import { Routes } from "../../../router/Routes";
+
 export const Header = () => {
   return (
     <AppBar
@@ -20,7 +13,7 @@ export const Header = () => {
         backgroundColor: "rgba(255, 255, 255, 0)", // Saydam arka plan
         backdropFilter: "blur(50px)", // Blur efekti
         WebkitBackdropFilter: "blur(10px)", // Safari desteği için
-        boxShadow: "none", // İstersen gölgeyi kaldır
+        boxShadow: "none", // Gölgeyi kaldır
       }}
     >
       <Toolbar
@@ -39,16 +32,24 @@ export const Header = () => {
             marginLeft: "auto",
             display: "flex",
             alignItems: "center",
-            gap: 1,
+            gap: 2,
           }}
         >
-          <IconButton>
-            <LinkedInIcon />
-          </IconButton>
-          <IconButton>
-            <InstagramIcon />
-          </IconButton>
-          <Divider orientation="vertical" />
+          {Routes.filter((route) => route.visibleOnHeader).map((route) => (
+            <Button
+              key={route.path}
+              component={RouterLink}
+              to={route.path}
+              color="inherit"
+              sx={{
+                textTransform: "none",
+              }}
+            >
+              <Typography>{route.label}</Typography>
+            </Button>
+          ))}
+
+          {/* Ayarlar */}
           <ThemeToggle />
           <LanguageSwitch />
         </Box>

@@ -12,7 +12,10 @@ export const Footer = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        borderTop: "2px solid",
+        borderTopColor: (theme) => theme.palette.primary.main,
       }}
+      py={2}
     >
       <Stack spacing={1} alignItems="center" justifyContent="center">
         <Stack direction="row" spacing={2}>
