@@ -139,7 +139,7 @@ export const Documentation = () => {
           linear-gradient(90deg, transparent 24%, ${gridColor} 25%, ${gridColor} 26%, transparent 27%, transparent 74%, ${gridColor} 75%, ${gridColor} 76%, transparent 77%, transparent)
         `,
         backgroundAttachment: "fixed",
-        py: { xs: 10, md: 14 },
+        py: { xs: 8 },
         color: theme.palette.text.primary,
       }}
     >

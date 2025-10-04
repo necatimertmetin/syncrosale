@@ -13,26 +13,18 @@ import { EnterAnimation2 } from "../../components/animated-components/div/EnterA
 
 export const Contact = () => {
   const theme = useTheme();
-  const gridColor = theme.palette.highlightedRow.main + "44";
   const MotionBox = motion(Box);
   const MotionStack = motion(Stack);
 
   return (
     <Grid
       container
-      sx={{
-        backgroundSize: "40px 40px",
-        backgroundImage: `
-          linear-gradient(0deg, transparent 24%, ${gridColor} 25%, ${gridColor} 26%, transparent 27%, transparent 74%, ${gridColor} 75%, ${gridColor} 76%, transparent 77%, transparent),
-          linear-gradient(90deg, transparent 24%, ${gridColor} 25%, ${gridColor} 26%, transparent 27%, transparent 74%, ${gridColor} 75%, ${gridColor} 76%, transparent 77%, transparent)
-        `,
-        backgroundAttachment: "fixed",
-        py: { xs: 8, sm: 12, md: 16 },
-        height: { xs: "auto", md: "100vh" },
-      }}
       alignItems="center"
       justifyContent="center"
       spacing={10}
+      sx={{
+        py: { xs: 8 },
+      }}
     >
       {/* Sol taraf - Contact Info */}
       <Grid
@@ -92,54 +84,36 @@ export const Contact = () => {
           sx={{
             width: "100%",
             maxWidth: 520,
-            p: { xs: 3, md: 6 },
+            p: { xs: 4, md: 6 },
             borderRadius: 4,
             backdropFilter: "blur(10px)",
             background:
               theme.palette.mode === "dark"
-                ? "rgba(255,255,255,0.05)"
-                : "rgba(0,0,0,0.05)",
-            boxShadow:
-              theme.palette.mode === "dark"
-                ? "0 0 20px rgba(0, 200, 200, 0.1)"
-                : "0 0 20px rgba(0, 0, 0, 0.1)",
+                ? "rgba(255,255,255,0.03)"
+                : "rgba(0,0,0,0.04)",
+            boxShadow: "0 0 25px rgba(0,0,0,0.08)",
+            border: "1px solid rgba(255,255,255,0.1)",
           }}
         >
           <Typography variant="h4" fontWeight="600" mb={3}>
             Contact Us
           </Typography>
 
-          <Stack spacing={3}>
+          <Stack spacing={3} mb={3}>
             <TextField
               label="Name"
               variant="outlined"
               fullWidth
-              InputProps={{
-                sx: {
-                  color: theme.palette.text.primary,
-                  "& .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "rgba(255,255,255,0.2)",
-                  },
-                  "&:hover .MuiOutlinedInput-notchedOutline": {
-                    borderColor: theme.palette.primary.main,
-                  },
-                },
+              InputLabelProps={{
+                style: { color: theme.palette.text.secondary },
               }}
             />
             <TextField
               label="Email"
               variant="outlined"
               fullWidth
-              InputProps={{
-                sx: {
-                  color: theme.palette.text.primary,
-                  "& .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "rgba(255,255,255,0.2)",
-                  },
-                  "&:hover .MuiOutlinedInput-notchedOutline": {
-                    borderColor: theme.palette.primary.main,
-                  },
-                },
+              InputLabelProps={{
+                style: { color: theme.palette.text.secondary },
               }}
             />
             <TextField
@@ -148,16 +122,8 @@ export const Contact = () => {
               fullWidth
               multiline
               rows={5}
-              InputProps={{
-                sx: {
-                  color: theme.palette.text.primary,
-                  "& .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "rgba(255,255,255,0.2)",
-                  },
-                  "&:hover .MuiOutlinedInput-notchedOutline": {
-                    borderColor: theme.palette.primary.main,
-                  },
-                },
+              InputLabelProps={{
+                style: { color: theme.palette.text.secondary },
               }}
             />
           </Stack>
@@ -166,20 +132,9 @@ export const Contact = () => {
             variant="contained"
             size="large"
             sx={{
-              mt: 4,
-              px: 5,
-              py: 1.5,
-              fontSize: "1.1rem",
-              fontWeight: 600,
-              textTransform: "none",
-              alignSelf: "flex-end",
-              background: "linear-gradient(90deg, #04C8C8 0%, #00B2B2 100%)",
-              boxShadow: "0 4px 20px rgba(4,200,200,0.4)",
-              transition: "all 0.3s ease",
+              backgroundColor: theme.palette.primary.main,
               "&:hover": {
-                background: "linear-gradient(90deg, #05dada 0%, #03bfbf 100%)",
-                boxShadow: "0 4px 25px rgba(4,200,200,0.6)",
-                transform: "translateY(-2px)",
+                backgroundColor: theme.palette.primary.dark,
               },
             }}
           >

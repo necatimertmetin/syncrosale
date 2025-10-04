@@ -1,4 +1,4 @@
-import { Button, Grid, Stack, Typography, useTheme } from "@mui/material";
+import { Button, Grid, Stack, Typography } from "@mui/material";
 import syncrosale from "../../../assets/logo.png";
 import { AnimatedTypewriterText } from "../../../components/animated-components/text/AnimatedTypeWriterText";
 import { AnimatedSplitText } from "../../../components/animated-components/text/AnimatedSplitText";
@@ -9,8 +9,6 @@ import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 import MenuBookRoundedIcon from "@mui/icons-material/MenuBookRounded";
 
 export const Hero = () => {
-  const theme = useTheme();
-  const gridColor = theme.palette.highlightedRow.main + "44";
   const MotionImg = motion.img;
   const { translate } = useTranslation("pages.landing");
 
@@ -18,14 +16,7 @@ export const Hero = () => {
     <Grid
       container
       sx={{
-        backgroundSize: "40px 40px",
-        backgroundImage: `
-          linear-gradient(0deg, transparent 24%, ${gridColor} 25%, ${gridColor} 26%, transparent 27%, transparent 74%, ${gridColor} 75%, ${gridColor} 76%, transparent 77%, transparent),
-          linear-gradient(90deg, transparent 24%, ${gridColor} 25%, ${gridColor} 26%, transparent 27%, transparent 74%, ${gridColor} 75%, ${gridColor} 76%, transparent 77%, transparent)
-        `,
-        backgroundAttachment: "fixed",
-        py: { xs: 8, sm: 12, md: 16 }, // responsive padding-top & padding-bottom
-        height: { xs: "auto", md: "95vh" }, // küçük ekranlarda otomatik yükseklik
+        height: { xs: "auto", md: "95vh" },
       }}
       display="flex"
       alignItems="center"

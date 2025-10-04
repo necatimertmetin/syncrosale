@@ -95,8 +95,7 @@ export default function FAQPage() {
   return (
     <Box
       sx={{
-        backgroundColor: theme.palette.background.default,
-        py: { xs: 6, md: 10 },
+        py: { xs: 8 },
       }}
     >
       <Container maxWidth="md">
