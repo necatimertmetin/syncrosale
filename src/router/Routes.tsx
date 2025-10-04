@@ -1,5 +1,6 @@
 import { Contact } from "../pages/contact/Contact";
 import { Documentation } from "../pages/documentation/Documentation";
+import FAQ from "../pages/faq/FAQ";
 import { Landing } from "../pages/Landing/Landing";
 import { Pricing } from "../pages/pricing/Pricing";
 
@@ -22,6 +23,14 @@ export const Routes = [
     path: "/contact",
     element: <Contact />,
     label: "Contact",
+    visibleOnHeader: true,
+    visibleOnFooter: true,
+  },
+
+  {
+    path: "/faq",
+    element: <FAQ />,
+    label: "FAQ",
     visibleOnHeader: true,
     visibleOnFooter: true,
   },
