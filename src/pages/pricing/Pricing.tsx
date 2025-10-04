@@ -57,7 +57,7 @@ export const Pricing = () => {
 
   return (
     <Container maxWidth="lg">
-      <Stack spacing={3} textAlign="center" mb={8} pt={8}>
+      <Stack spacing={3} textAlign="center" mb={8} py={8}>
         <EnterAnimation2>
           <Typography variant="h3" fontWeight={700}>
             Choose Your Plan
@@ -69,7 +69,7 @@ export const Pricing = () => {
         </Typography>
       </Stack>
 
-      <Grid container spacing={6} justifyContent="center">
+      <Grid container spacing={6} justifyContent="center" pb={8}>
         {plans.map((plan, index) => (
           <Grid size={{ xs: 12, sm: 6, md: 4 }} key={plan.title}>
             <MotionCard
