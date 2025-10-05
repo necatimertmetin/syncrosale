@@ -23,7 +23,7 @@ const docs = [
       {
         title: "Creating an Account",
         content: `
-To get started with **SellerFlash**, you need to create an account.
+To get started with **Syncrosale**, you need to create an account.
 
 1. Go to the [Sign Up](#) page.
 2. Enter your business email and choose a secure password.
@@ -52,14 +52,14 @@ You can connect multiple marketplaces like Amazon, Trendyol, or Etsy.
         content: `
 Keep your listings and stock levels in sync across platforms.
 
-- Edit product quantities directly from SellerFlash.
+- Edit product quantities directly from Syncrosale.
 - Enable auto-sync to update stock in real-time.
 - Use “Bulk Edit” for faster management.`,
       },
       {
         title: "Automating Pricing",
         content: `
-SellerFlash lets you automate pricing with smart rules.
+Syncrosale lets you automate pricing with smart rules.
 
 1. Open **Store Settings → Pricing Rules**
 2. Set minimum and maximum margins
@@ -96,7 +96,7 @@ Gain insights into true profitability after fees and shipping.
       {
         title: "Connecting Third-Party Tools",
         content: `
-You can integrate SellerFlash with Google Sheets, Slack, or custom APIs.
+You can integrate Syncrosale with Google Sheets, Slack, or custom APIs.
 
 1. Go to **Settings → Integrations**
 2. Choose your desired app
@@ -151,7 +151,7 @@ export const Documentation = () => {
             </Typography>
           </EnterAnimation2>
           <Typography variant="h6" fontWeight={300} sx={{ opacity: 0.8 }}>
-            Learn how to get the most out of SellerFlash — from setup to
+            Learn how to get the most out of Syncrosale — from setup to
             automation.
           </Typography>
         </Stack>

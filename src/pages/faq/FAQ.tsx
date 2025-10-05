@@ -83,7 +83,7 @@ const faqData = [
       {
         question: "How can I contact support?",
         answer:
-          "You can contact our support team at support@sellerflash.com or via the Contact page.",
+          "You can contact our support team at support@Syncrosale.com or via the Contact page.",
       },
     ],
   },
@@ -118,7 +118,7 @@ export default function FAQPage() {
             align="center"
             sx={{ mb: 6, color: theme.palette.text.secondary }}
           >
-            Find answers to common questions about SellerFlash.
+            Find answers to common questions about Syncrosale.
           </Typography>
         </motion.div>
 
