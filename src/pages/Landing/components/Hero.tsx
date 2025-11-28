@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import { EnterAnimation2 } from "../../../components/animated-components/div/EnterAnimation2";
 import { useTranslation } from "../../../providers/useTranslation";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
-import MenuBookRoundedIcon from "@mui/icons-material/MenuBookRounded";
 
 export const Hero = () => {
   const MotionImg = motion.img;
@@ -46,14 +45,7 @@ export const Hero = () => {
               size="large"
               endIcon={<ChevronRightRoundedIcon />}
             >
-              Get Started
-            </Button>
-            <Button
-              sx={{ textTransform: "none" }}
-              size="large"
-              endIcon={<MenuBookRoundedIcon />}
-            >
-              Documentation
+              Login
             </Button>
           </Stack>
         </Stack>

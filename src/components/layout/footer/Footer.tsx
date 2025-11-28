@@ -1,23 +1,51 @@
-import { Box, IconButton, Stack, Typography } from "@mui/material";
+import React from "react";
+import {
+  Box,
+  IconButton,
+  Stack,
+  Typography,
+  Link as MuiLink,
+  Divider,
+  useTheme,
+} from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { InstagramButton } from "./components/social/Instagram";
+import { Routes } from "../../../router/Routes";
 
-export const Footer = () => {
+type AppRoute = {
+  path: string;
+  element: React.ReactNode;
+  label: string;
+  visibleOnHeader: boolean;
+  visibleOnFooter: boolean;
+};
+
+export const Footer: React.FC = () => {
+  const theme = useTheme();
+
+  const footerLinks: AppRoute[] = Routes.filter(
+    (r: AppRoute) => r.visibleOnFooter
+  );
+
   return (
     <Box
       sx={{
         position: "relative",
         overflow: "hidden",
-        backgroundColor: (theme) => theme.palette.background.default,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        backgroundColor: theme.palette.background.default,
         borderTop: "2px solid",
-        borderTopColor: (theme) => theme.palette.primary.main,
+        borderTopColor: theme.palette.primary.main,
+        mt: 6,
       }}
-      py={2}
+      py={4}
     >
-      <Stack spacing={1} alignItems="center" justifyContent="center">
+      <Stack
+        spacing={3}
+        alignItems="center"
+        justifyContent="center"
+        sx={{ width: "100%" }}
+      >
+        {/* SOCIAL ICONS */}
         <Stack direction="row" spacing={2}>
           <IconButton
             color="primary"
@@ -27,6 +55,37 @@ export const Footer = () => {
             <InstagramIcon fontSize="large" />
           </IconButton>
         </Stack>
+
+        {/* FOOTER LINKS (AUTO-GENERATED) */}
+        <Stack
+          direction="row"
+          spacing={3}
+          flexWrap="wrap"
+          justifyContent="center"
+          sx={{ maxWidth: "600px" }}
+        >
+          {footerLinks.map((route) => (
+            <MuiLink
+              key={route.path}
+              href={route.path}
+              underline="none"
+              sx={{
+                color: theme.palette.text.secondary,
+                fontSize: "0.85rem",
+                transition: "0.2s ease",
+                "&:hover": {
+                  color: theme.palette.primary.main,
+                },
+              }}
+            >
+              {route.label}
+            </MuiLink>
+          ))}
+        </Stack>
+
+        <Divider sx={{ width: "80%", opacity: 0.2 }} />
+
+        {/* COPYRIGHT */}
         <Typography
           variant="body2"
           color="text.secondary"
@@ -34,6 +93,7 @@ export const Footer = () => {
         >
           © {new Date().getFullYear()} Syncrosale. All rights reserved.
         </Typography>
+
         <InstagramButton />
       </Stack>
     </Box>

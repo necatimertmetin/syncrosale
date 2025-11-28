@@ -3,6 +3,9 @@ import { Documentation } from "../pages/documentation/Documentation";
 import FAQ from "../pages/faq/FAQ";
 import { Landing } from "../pages/Landing/Landing";
 import { Pricing } from "../pages/pricing/Pricing";
+import { PrivacyPolicy } from "../pages/legals/PrivacyPolicy";
+import { CookiePolicy } from "../pages/legals/Cookie";
+import { DataProcessingAddendum } from "../pages/legals/DPA";
 
 export const Routes = [
   {
@@ -16,8 +19,8 @@ export const Routes = [
     path: "/pricing",
     element: <Pricing />,
     label: "Pricing",
-    visibleOnHeader: true,
-    visibleOnFooter: true,
+    visibleOnHeader: false,
+    visibleOnFooter: false,
   },
   {
     path: "/contact",
@@ -38,7 +41,28 @@ export const Routes = [
     path: "/documentation",
     element: <Documentation />,
     label: "Documentation",
-    visibleOnHeader: true,
+    visibleOnHeader: false,
+    visibleOnFooter: false,
+  },
+  {
+    path: "/privacy",
+    element: <PrivacyPolicy />,
+    label: "Privacy",
+    visibleOnHeader: false,
+    visibleOnFooter: true,
+  },
+  {
+    path: "/Cookie",
+    element: <CookiePolicy />,
+    label: "Cookies",
+    visibleOnHeader: false,
+    visibleOnFooter: true,
+  },
+  {
+    path: "/DPA",
+    element: <DataProcessingAddendum />,
+    label: "DPA",
+    visibleOnHeader: false,
     visibleOnFooter: true,
   },
 ];
