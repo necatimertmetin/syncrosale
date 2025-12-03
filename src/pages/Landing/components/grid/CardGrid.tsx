@@ -2,16 +2,20 @@ import React, { Suspense, useState, useEffect } from "react";
 import { Box, Grid, Paper, Stack, Typography, useTheme } from "@mui/material";
 import { features } from "./components/cardData";
 import { motion } from "framer-motion";
+import { useTranslation } from "../../../../providers/useTranslation";
 
 export const CardSection = () => {
   const [loadedAnimations, setLoadedAnimations] = useState<{
     [key: string]: React.ComponentType | null;
   }>({});
+
+  const { translate } = useTranslation("pages.landing.features");
   const theme = useTheme();
+
   useEffect(() => {
-    features.forEach(({ title, animationComponent }) => {
+    features.forEach(({ key, animationComponent }) => {
       animationComponent().then((Component) => {
-        setLoadedAnimations((prev) => ({ ...prev, [title]: Component }));
+        setLoadedAnimations((prev) => ({ ...prev, [key]: Component }));
       });
     });
   }, []);
@@ -25,11 +29,14 @@ export const CardSection = () => {
         padding: 10,
       }}
     >
-      {features.map(({ title, description }, index) => {
-        const Animation = loadedAnimations[title];
+      {features.map(({ key }, index) => {
+        const Animation = loadedAnimations[key];
+        const title = translate(`${key}.title`);
+        const description = translate(`${key}.description`);
+
         return (
           <Grid
-            key={title}
+            key={key}
             size={{ xs: 12, sm: 6, md: 4, lg: 3 }}
             sx={{ display: "flex" }}
           >
@@ -71,6 +78,7 @@ export const CardSection = () => {
                     <div>Loading...</div>
                   )}
                 </Box>
+
                 <Stack spacing={1} sx={{ flex: 1 }}>
                   <Typography variant="h6" color="primary">
                     {title}

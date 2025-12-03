@@ -45,7 +45,7 @@ export const Hero = () => {
               size="large"
               endIcon={<ChevronRightRoundedIcon />}
             >
-              Login
+              {translate("hero.loginButton")}
             </Button>
           </Stack>
         </Stack>

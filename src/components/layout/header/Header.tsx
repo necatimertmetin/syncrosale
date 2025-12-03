@@ -1,11 +1,14 @@
-import { AppBar, Toolbar, Box, Stack, Typography, Button } from "@mui/material";
+import { AppBar, Toolbar, Box, Typography, Button, Stack } from "@mui/material";
 import { ThemeToggle } from "./components/ThemeToggle";
 import LanguageSwitch from "./components/LanguageSwitch";
-import { Link as RouterLink } from "react-router-dom"; // Link import
+import { Link as RouterLink } from "react-router-dom";
 import syncrosale from "../../../assets/logo.png";
 import { Routes } from "../../../router/Routes";
+import { useTranslation } from "../../../providers/useTranslation";
 
 export const Header = () => {
+  const { translateWithoutPrefix } = useTranslation();
+
   return (
     <AppBar
       position="static"
@@ -27,6 +30,7 @@ export const Header = () => {
           <Typography variant="h4">Syncrosale</Typography>
         </Stack>
 
+        {/* Menü */}
         <Box
           sx={{
             marginLeft: "auto",
@@ -45,7 +49,7 @@ export const Header = () => {
                 textTransform: "none",
               }}
             >
-              <Typography>{route.label}</Typography>
+              <Typography>{translateWithoutPrefix(route.label)}</Typography>
             </Button>
           ))}
 

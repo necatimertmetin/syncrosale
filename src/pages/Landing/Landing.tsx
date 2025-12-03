@@ -3,8 +3,12 @@ import { BackgroundLight } from "../../components/animated-components/div/Backgr
 import { Hero } from "./components/Hero";
 import { CardSection } from "./components/grid/CardGrid";
 import { AnimatedSplitText } from "../../components/animated-components/text/AnimatedSplitText";
+import { useTranslation } from "../../providers/useTranslation";
+
 export const Landing = () => {
   const theme = useTheme();
+  const { translate } = useTranslation("pages.landing");
+
   return (
     <Box sx={{ overflow: "hidden" }}>
       <BackgroundLight intensity={0.7} />
@@ -14,34 +18,30 @@ export const Landing = () => {
         bottom={0}
         left={0}
       />
+
       <Hero />
+
       <Box
         sx={{
+          textAlign: "center",
+          maxWidth: "800px",
+          mx: "auto",
           py: 10,
-          backgroundColor: (theme) => theme.palette.background.default,
+          px: 2,
+          border: `2px solid ${theme.palette.secondary.main}`,
+          borderRadius: 5,
         }}
       >
-        <Box
-          sx={{
-            textAlign: "center",
-            maxWidth: "800px",
-            mx: "auto",
-            py: 10,
-            px: 2,
-            border: `2px solid ${theme.palette.secondary.main}`,
-            borderRadius: 5,
-          }}
-        >
-          <AnimatedSplitText variant="h2" text="Basit. Hızlı. Senkron." />
+        <AnimatedSplitText variant="h2" text={translate("section.title")} />
 
-          <Typography variant="h6" color="text.secondary" mt={2}>
-            Tüm satış kanallarınız tek bir akışta buluşsun. Syncrosale ile fark
-            yaratmaya hazır olun.
-          </Typography>
-        </Box>
+        <Typography variant="h6" color="text.secondary" mt={2}>
+          {translate("section.subtitle")}
+        </Typography>
       </Box>
+
       <CardSection />
 
+      {/* QUOTE */}
       <Box
         sx={{
           py: 10,
@@ -58,24 +58,21 @@ export const Landing = () => {
             borderRadius: 5,
           }}
         >
-          “ At Syncrosale, we don’t just build products — we create moments of
-          synchronicity between vision and execution. Our mission is to empower
-          bold thinkers and reshape the way innovation connects with real-world
-          impact. ”
+          {translate("quote.text")}
         </Typography>
 
         <Stack direction={"row"} alignItems={"center"} spacing={2}>
           <Avatar
-            alt="Sarper Celebi"
-            src="/assets/julian-avatar.jpg" // Görsel yolunu buraya ekle
+            alt={translate("quote.author")}
+            src="/assets/julian-avatar.jpg"
             sx={{ width: 96, height: 96 }}
           />
           <Box>
             <Typography variant="h5" fontWeight="medium" gutterBottom>
-              Sarper Celebi
+              {translate("quote.author")}
             </Typography>
             <Typography variant="body1" color="text.secondary">
-              Founder & CEO, Syncrosale
+              {translate("quote.role")}
             </Typography>
           </Box>
         </Stack>

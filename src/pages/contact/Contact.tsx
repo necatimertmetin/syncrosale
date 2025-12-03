@@ -10,11 +10,13 @@ import {
 import { motion } from "framer-motion";
 import { Email, Phone, LocationOn } from "@mui/icons-material";
 import { EnterAnimation2 } from "../../components/animated-components/div/EnterAnimation2";
+import { useTranslation } from "../../providers/useTranslation";
 
 export const Contact = () => {
   const theme = useTheme();
   const MotionBox = motion(Box);
   const MotionStack = motion(Stack);
+  const { translate } = useTranslation("pages.contact");
 
   return (
     <Grid
@@ -45,11 +47,10 @@ export const Contact = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <Typography variant="h3" fontWeight="700">
-              Let’s Talk
+              {translate("title")}
             </Typography>
             <Typography variant="h6" fontWeight={300} sx={{ opacity: 0.8 }}>
-              Have a project in mind or just want to say hi? Reach out — we’d
-              love to hear from you.
+              {translate("subtitle")}
             </Typography>
 
             <Stack spacing={2} sx={{ pt: 3 }}>
@@ -92,16 +93,15 @@ export const Contact = () => {
                 ? "rgba(255,255,255,0.03)"
                 : "rgba(0,0,0,0.04)",
             boxShadow: "0 0 25px rgba(0,0,0,0.08)",
-            border: "1px solid rgba(255,255,255,0.1)",
           }}
         >
-          <Typography variant="h4" fontWeight="600" mb={3}>
-            Contact Us
+          <Typography variant="h5" fontWeight="600" mb={2}>
+            {translate("title")}
           </Typography>
 
           <Stack spacing={3} mb={3}>
             <TextField
-              label="Name"
+              label={translate("form.name")}
               variant="outlined"
               fullWidth
               InputLabelProps={{
@@ -109,7 +109,7 @@ export const Contact = () => {
               }}
             />
             <TextField
-              label="Email"
+              label={translate("form.email")}
               variant="outlined"
               fullWidth
               InputLabelProps={{
@@ -117,7 +117,15 @@ export const Contact = () => {
               }}
             />
             <TextField
-              label="Message"
+              label={translate("form.subject")}
+              variant="outlined"
+              fullWidth
+              InputLabelProps={{
+                style: { color: theme.palette.text.secondary },
+              }}
+            />
+            <TextField
+              label={translate("form.message")}
               variant="outlined"
               fullWidth
               multiline
@@ -130,6 +138,7 @@ export const Contact = () => {
 
           <Button
             variant="contained"
+            fullWidth
             size="large"
             sx={{
               backgroundColor: theme.palette.primary.main,
@@ -138,7 +147,7 @@ export const Contact = () => {
               },
             }}
           >
-            Send Message
+            {translate("form.submit")}
           </Button>
         </MotionBox>
       </Grid>

@@ -1,68 +1,76 @@
 import { Contact } from "../pages/contact/Contact";
 import { Documentation } from "../pages/documentation/Documentation";
-import FAQ from "../pages/faq/FAQ";
 import { Landing } from "../pages/Landing/Landing";
 import { Pricing } from "../pages/pricing/Pricing";
 import { PrivacyPolicy } from "../pages/legals/PrivacyPolicy";
 import { CookiePolicy } from "../pages/legals/Cookie";
 import { DataProcessingAddendum } from "../pages/legals/DPA";
+import { ErrorPage } from "../pages/error/Error";
 
 export const Routes = [
   {
     path: "/",
     element: <Landing />,
-    label: "Homepage",
+    label: "navigation.homepage",
     visibleOnHeader: true,
     visibleOnFooter: true,
   },
   {
     path: "/pricing",
     element: <Pricing />,
-    label: "Pricing",
+    label: "navigation.pricing",
     visibleOnHeader: false,
     visibleOnFooter: false,
   },
   {
     path: "/contact",
     element: <Contact />,
-    label: "Contact",
+    label: "navigation.contact",
     visibleOnHeader: true,
     visibleOnFooter: true,
   },
-
+  /*
   {
     path: "/faq",
     element: <FAQ />,
-    label: "FAQ",
-    visibleOnHeader: true,
+    label: "navigation.faq",
+    visibleOnHeader: false,
     visibleOnFooter: true,
   },
+  */
   {
     path: "/documentation",
     element: <Documentation />,
-    label: "Documentation",
+    label: "navigation.documentation",
     visibleOnHeader: false,
     visibleOnFooter: false,
   },
   {
     path: "/privacy",
     element: <PrivacyPolicy />,
-    label: "Privacy",
+    label: "navigation.privacyPolicy",
     visibleOnHeader: false,
     visibleOnFooter: true,
   },
   {
     path: "/Cookie",
     element: <CookiePolicy />,
-    label: "Cookies",
+    label: "navigation.cookies",
     visibleOnHeader: false,
     visibleOnFooter: true,
   },
   {
     path: "/DPA",
     element: <DataProcessingAddendum />,
-    label: "DPA",
+    label: "navigation.dpa",
     visibleOnHeader: false,
     visibleOnFooter: true,
+  },
+  {
+    path: "/error",
+    element: <ErrorPage />,
+    label: "error",
+    visibleOnHeader: false,
+    visibleOnFooter: false,
   },
 ];

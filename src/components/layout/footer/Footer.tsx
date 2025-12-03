@@ -11,17 +11,17 @@ import {
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { InstagramButton } from "./components/social/Instagram";
 import { Routes } from "../../../router/Routes";
+import { useTranslation } from "../../../providers/useTranslation";
 
 type AppRoute = {
   path: string;
-  element: React.ReactNode;
   label: string;
-  visibleOnHeader: boolean;
   visibleOnFooter: boolean;
 };
 
 export const Footer: React.FC = () => {
   const theme = useTheme();
+  const { translateWithoutPrefix } = useTranslation();
 
   const footerLinks: AppRoute[] = Routes.filter(
     (r: AppRoute) => r.visibleOnFooter
@@ -56,29 +56,22 @@ export const Footer: React.FC = () => {
           </IconButton>
         </Stack>
 
-        {/* FOOTER LINKS (AUTO-GENERATED) */}
-        <Stack
-          direction="row"
-          spacing={3}
-          flexWrap="wrap"
-          justifyContent="center"
-          sx={{ maxWidth: "600px" }}
-        >
+        {/* NAV LINKS */}
+        <Stack direction="row" spacing={3}>
           {footerLinks.map((route) => (
             <MuiLink
               key={route.path}
               href={route.path}
               underline="none"
+              color="text.secondary"
               sx={{
-                color: theme.palette.text.secondary,
-                fontSize: "0.85rem",
-                transition: "0.2s ease",
+                fontSize: "0.9rem",
                 "&:hover": {
                   color: theme.palette.primary.main,
                 },
               }}
             >
-              {route.label}
+              {translateWithoutPrefix(route.label)}
             </MuiLink>
           ))}
         </Stack>
@@ -91,7 +84,9 @@ export const Footer: React.FC = () => {
           color="text.secondary"
           sx={{ fontSize: "0.75rem" }}
         >
-          © {new Date().getFullYear()} Syncrosale. All rights reserved.
+          {translateWithoutPrefix("footer.allRightsReserved", {
+            year: new Date().getFullYear(),
+          })}
         </Typography>
 
         <InstagramButton />
