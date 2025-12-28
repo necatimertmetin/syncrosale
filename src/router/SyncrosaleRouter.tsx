@@ -5,7 +5,7 @@ import { ErrorPage } from "../pages/error/Error";
 
 export const SyncrosaleRouter = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/syncrosale">
       <Routes>
         <Route element={<PageLayout />}>
           {SyncrosaleRoutes.map((route) => (

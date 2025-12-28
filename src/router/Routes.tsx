@@ -53,14 +53,14 @@ export const Routes = [
     visibleOnFooter: true,
   },
   {
-    path: "/Cookie",
+    path: "/cookie",
     element: <CookiePolicy />,
     label: "navigation.cookies",
     visibleOnHeader: false,
     visibleOnFooter: true,
   },
   {
-    path: "/DPA",
+    path: "/dpa",
     element: <DataProcessingAddendum />,
     label: "navigation.dpa",
     visibleOnHeader: false,
