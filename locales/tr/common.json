@@ -1,0 +1,76 @@
+{
+  "pages": {
+    "landing": {
+      "slogan": "Pazarı değiştir, senkronla geleceği yakala.",
+      "hero": {
+        "loginButton": "Giriş Yap"
+      },
+      "section": {
+        "title": "Basit. Hızlı. Senkron.",
+        "subtitle": "Tüm satış kanallarınız tek bir akışta buluşsun. Syncrosale ile fark yaratmaya hazır olun."
+      },
+      "features": {
+        "tracking": {
+          "title": "Gerçek Zamanlı Sipariş Takibi",
+          "description": "Tüm gelen siparişleri anlık bildirimlerle takip edin, her şeye ışık hızında hakim olun."
+        },
+        "stockSync": {
+          "title": "Akıllı Ürün ve Stok Senkronizasyonu",
+          "description": "Tüm platformlardaki listelemelerinizi ve stoklarınızı otomatik olarak mükemmel şekilde senkron tutun."
+        },
+        "reports": {
+          "title": "Güçlü Görsel Raporlar",
+          "description": "Verilerinizi dinamik, kolay okunur satış, stok ve sipariş raporlarına dönüştürün."
+        },
+        "multiStore": {
+          "title": "Tek Panelden Çoklu Mağaza Yönetimi",
+          "description": "Tüm mağazalarınızı tek bir sade panelden yönetin. Sekmeler arasında dolaşmaya son — tam kontrol sizde."
+        }
+      },
+      "quote": {
+        "text": "“ Syncrosale'de sadece ürün geliştirmiyoruz — vizyon ile uygulama arasında senkron anlar yaratıyoruz. Misyonumuz, cesur düşünürleri güçlendirmek ve inovasyonun gerçek dünya etkisiyle buluşma şeklini yeniden tanımlamak. ”",
+        "author": "Sarper Celebi",
+        "role": "Kurucu & CEO, Syncrosale"
+      }
+    },
+    "contact": {
+      "title": "Haydi Konuşalım",
+      "subtitle": "Aklında bir proje mi var yoksa sadece selam vermek mi istiyorsun? Bizimle iletişime geç — senden haber almayı çok isteriz.",
+      "form": {
+        "name": "İsim",
+        "email": "E-posta",
+        "subject": "Konu",
+        "message": "Mesaj",
+        "submit": "Mesaj Gönder"
+      }
+    },
+    "error": {
+      "title": "Bir şeyler ters gitti",
+      "subtitle": "Aradığınız sayfa mevcut değil veya beklenmeyen bir hata oluştu.",
+      "goHome": "Ana Sayfaya Dön"
+    }
+  },
+  "languages": {
+    "english": "İngilizce",
+    "turkish": "Türkçe"
+  },
+  "changeLanguage": "Dili Değiştir",
+  "hello": "Merhaba",
+  "buttons": {
+    "close": "Kapat",
+    "open": "Aç"
+  },
+  "navigation": {
+    "homepage": "Ana Sayfa",
+    "pricing": "Fiyatlandırma",
+    "contact": "İletişim",
+    "documentation": "Dokümantasyon",
+    "faq": "SSS",
+    "privacyPolicy": "Gizlilik Politikası",
+    "cookies": "Çerezler",
+    "dpa": "Veri İşleme Sözleşmesi"
+  },
+  "footer": {
+    "allRightsReserved": "© {{year}} Syncrosale. Tüm hakları saklıdır."
+  }
+}

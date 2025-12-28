@@ -1,0 +1,76 @@
+{
+  "pages": {
+    "landing": {
+      "slogan": "Disrupt the Market, One Sync at a Time.",
+      "hero": {
+        "loginButton": "Login"
+      },
+      "section": {
+        "title": "Simple. Fast. Sync.",
+        "subtitle": "Bring all your sales channels together in a single flow. Get ready to make a difference with Syncrosale."
+      },
+      "quote": {
+        "text": "“ At Syncrosale, we don’t just build products — we create moments of synchronicity between vision and execution. Our mission is to empower bold thinkers and reshape the way innovation connects with real-world impact. ”",
+        "author": "Sarper Celebi",
+        "role": "Founder & CEO, Syncrosale"
+      },
+      "features": {
+        "tracking": {
+          "title": "Real-Time Order Tracking",
+          "description": "Stay on top of every incoming order with instant updates and lightning-fast visibility."
+        },
+        "stockSync": {
+          "title": "Smart Product & Stock Sync",
+          "description": "Keep all your listings and inventory perfectly in sync — across all platforms, automatically."
+        },
+        "reports": {
+          "title": "Powerful Visual Reports",
+          "description": "Turn your data into insights with dynamic, easy-to-read sales, stock, and order reports."
+        },
+        "multiStore": {
+          "title": "Unified Multi-Store Management",
+          "description": "Manage all your stores from one clean dashboard. No more switching tabs — just full control."
+        }
+      }
+    },
+    "contact": {
+      "title": "Let’s Talk",
+      "subtitle": "Have a project in mind or just want to say hi? Reach out — we’d love to hear from you.",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "submit": "Send Message"
+      }
+    },
+    "error": {
+      "title": "Something went wrong",
+      "subtitle": "The page you're looking for doesn’t exist or an unexpected error occurred.",
+      "goHome": "Go Back Home"
+    }
+  },
+  "languages": {
+    "english": "English",
+    "turkish": "Turkish"
+  },
+  "changeLanguage": "Change Language",
+  "hello": "Hello",
+  "buttons": {
+    "close": "Close",
+    "open": "Open"
+  },
+  "navigation": {
+    "homepage": "Homepage",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "documentation": "Documentation",
+    "faq": "FAQ",
+    "privacyPolicy": "Privacy Policy",
+    "cookies": "Cookies",
+    "dpa": "Data Processing Addendum"
+  },
+  "footer": {
+    "allRightsReserved": "© {{year}} Syncrosale. All rights reserved."
+  }
+}
