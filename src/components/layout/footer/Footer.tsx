@@ -12,20 +12,13 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import { InstagramButton } from "./components/social/Instagram";
 import { Routes } from "../../../router/Routes";
 import { useTranslation } from "../../../providers/useTranslation";
-
-type AppRoute = {
-  path: string;
-  label: string;
-  visibleOnFooter: boolean;
-};
+import { Link as RouterLink } from "react-router-dom";
 
 export const Footer: React.FC = () => {
   const theme = useTheme();
   const { translateWithoutPrefix } = useTranslation();
 
-  const footerLinks: AppRoute[] = Routes.filter(
-    (r: AppRoute) => r.visibleOnFooter
-  );
+  const footerLinks = Routes.filter((r) => r.visibleOnFooter);
 
   return (
     <Box
@@ -39,13 +32,7 @@ export const Footer: React.FC = () => {
       }}
       py={4}
     >
-      <Stack
-        spacing={3}
-        alignItems="center"
-        justifyContent="center"
-        sx={{ width: "100%" }}
-      >
-        {/* SOCIAL ICONS */}
+      <Stack spacing={3} alignItems="center" justifyContent="center">
         <Stack direction="row" spacing={2}>
           <IconButton
             color="primary"
@@ -56,12 +43,12 @@ export const Footer: React.FC = () => {
           </IconButton>
         </Stack>
 
-        {/* NAV LINKS */}
         <Stack direction="row" spacing={3}>
           {footerLinks.map((route) => (
             <MuiLink
               key={route.path}
-              href={route.path}
+              component={RouterLink}
+              to={route.path === "/" ? "/" : `/${route.path}`}
               underline="none"
               color="text.secondary"
               sx={{
@@ -78,7 +65,6 @@ export const Footer: React.FC = () => {
 
         <Divider sx={{ width: "80%", opacity: 0.2 }} />
 
-        {/* COPYRIGHT */}
         <Typography
           variant="body2"
           color="text.secondary"

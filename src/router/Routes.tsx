@@ -6,8 +6,17 @@ import { PrivacyPolicy } from "../pages/legals/PrivacyPolicy";
 import { CookiePolicy } from "../pages/legals/Cookie";
 import { DataProcessingAddendum } from "../pages/legals/DPA";
 import { ErrorPage } from "../pages/error/Error";
+import type { JSX } from "react";
 
-export const Routes = [
+export type AppRoute = {
+  path: string;
+  element: JSX.Element;
+  label: string;
+  visibleOnHeader: boolean;
+  visibleOnFooter: boolean;
+};
+
+export const Routes: AppRoute[] = [
   {
     path: "/",
     element: <Landing />,
@@ -16,58 +25,49 @@ export const Routes = [
     visibleOnFooter: true,
   },
   {
-    path: "/pricing",
+    path: "pricing",
     element: <Pricing />,
     label: "navigation.pricing",
     visibleOnHeader: false,
     visibleOnFooter: false,
   },
   {
-    path: "/contact",
+    path: "contact",
     element: <Contact />,
     label: "navigation.contact",
     visibleOnHeader: true,
     visibleOnFooter: true,
   },
-  /*
   {
-    path: "/faq",
-    element: <FAQ />,
-    label: "navigation.faq",
-    visibleOnHeader: false,
-    visibleOnFooter: true,
-  },
-  */
-  {
-    path: "/documentation",
+    path: "documentation",
     element: <Documentation />,
     label: "navigation.documentation",
     visibleOnHeader: false,
     visibleOnFooter: false,
   },
   {
-    path: "/privacy",
+    path: "privacy",
     element: <PrivacyPolicy />,
     label: "navigation.privacyPolicy",
     visibleOnHeader: false,
     visibleOnFooter: true,
   },
   {
-    path: "/cookie",
+    path: "cookie",
     element: <CookiePolicy />,
     label: "navigation.cookies",
     visibleOnHeader: false,
     visibleOnFooter: true,
   },
   {
-    path: "/dpa",
+    path: "dpa",
     element: <DataProcessingAddendum />,
     label: "navigation.dpa",
     visibleOnHeader: false,
     visibleOnFooter: true,
   },
   {
-    path: "/error",
+    path: "error",
     element: <ErrorPage />,
     label: "error",
     visibleOnHeader: false,

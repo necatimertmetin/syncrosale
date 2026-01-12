@@ -13,24 +13,18 @@ export const Header = () => {
     <AppBar
       position="static"
       sx={{
-        backgroundColor: "rgba(255, 255, 255, 0)", // Saydam arka plan
-        backdropFilter: "blur(50px)", // Blur efekti
-        WebkitBackdropFilter: "blur(10px)", // Safari desteği için
-        boxShadow: "none", // Gölgeyi kaldır
+        backgroundColor: "rgba(255, 255, 255, 0)",
+        backdropFilter: "blur(50px)",
+        WebkitBackdropFilter: "blur(10px)",
+        boxShadow: "none",
       }}
     >
-      <Toolbar
-        sx={{
-          position: "relative",
-          minHeight: 64,
-        }}
-      >
-        <Stack direction={"row"} alignItems={"center"} spacing={2}>
-          <img src={syncrosale} style={{ height: "48px" }} />
+      <Toolbar sx={{ position: "relative", minHeight: 64 }}>
+        <Stack direction="row" alignItems="center" spacing={2}>
+          <img src={syncrosale} style={{ height: 48 }} />
           <Typography variant="h4">Syncrosale</Typography>
         </Stack>
 
-        {/* Menü */}
         <Box
           sx={{
             marginLeft: "auto",
@@ -43,17 +37,14 @@ export const Header = () => {
             <Button
               key={route.path}
               component={RouterLink}
-              to={route.path}
+              to={route.path === "/" ? "/" : `/${route.path}`}
               color="inherit"
-              sx={{
-                textTransform: "none",
-              }}
+              sx={{ textTransform: "none" }}
             >
               <Typography>{translateWithoutPrefix(route.label)}</Typography>
             </Button>
           ))}
 
-          {/* Ayarlar */}
           <ThemeToggle />
           <LanguageSwitch />
         </Box>
