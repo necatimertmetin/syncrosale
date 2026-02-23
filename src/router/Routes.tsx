@@ -7,6 +7,7 @@ import { CookiePolicy } from "../pages/legals/Cookie";
 import { DataProcessingAddendum } from "../pages/legals/DPA";
 import { ErrorPage } from "../pages/error/Error";
 import type { JSX } from "react";
+import { Features } from "../pages/features/Features";
 
 export type AppRoute = {
   path: string;
@@ -25,10 +26,17 @@ export const Routes: AppRoute[] = [
     visibleOnFooter: true,
   },
   {
+    path: "features",
+    element: <Features />,
+    label: "navigation.features",
+    visibleOnHeader: true,
+    visibleOnFooter: false,
+  },
+  {
     path: "pricing",
     element: <Pricing />,
     label: "navigation.pricing",
-    visibleOnHeader: false,
+    visibleOnHeader: true,
     visibleOnFooter: false,
   },
   {
@@ -49,7 +57,7 @@ export const Routes: AppRoute[] = [
     path: "privacy",
     element: <PrivacyPolicy />,
     label: "navigation.privacyPolicy",
-    visibleOnHeader: false,
+    visibleOnHeader: true,
     visibleOnFooter: true,
   },
   {

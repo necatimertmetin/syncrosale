@@ -1,76 +1,91 @@
 {
   "pages": {
     "landing": {
-      "slogan": "Pazarı değiştir, senkronla geleceği yakala.",
+      "slogan": "Amazon operasyonlarını uçtan uca otomatikleştir.",
       "hero": {
-        "loginButton": "Giriş Yap"
+        "loginButton": "Panele Git"
       },
       "section": {
-        "title": "Basit. Hızlı. Senkron.",
-        "subtitle": "Tüm satış kanallarınız tek bir akışta buluşsun. Syncrosale ile fark yaratmaya hazır olun."
+        "title": "Basit. Hızlı. Kontrol Sende.",
+        "subtitle": "Satın alma, depo yönetimi ve kâr takibini tek bir akışta yönetin. Syncrosale ile operasyonel karmaşayı ortadan kaldırın."
       },
       "features": {
         "tracking": {
           "title": "Gerçek Zamanlı Sipariş Takibi",
-          "description": "Tüm gelen siparişleri anlık bildirimlerle takip edin, her şeye ışık hızında hakim olun."
+          "description": "Tüm siparişlerinizi anlık olarak izleyin, gecikmeleri ve sorunları oluşmadan yakalayın."
         },
         "stockSync": {
-          "title": "Akıllı Ürün ve Stok Senkronizasyonu",
-          "description": "Tüm platformlardaki listelemelerinizi ve stoklarınızı otomatik olarak mükemmel şekilde senkron tutun."
+          "title": "Akıllı Stok ve Ürün Yönetimi",
+          "description": "Tüm listelemelerinizi ve stoklarınızı platformlar arasında otomatik olarak senkronize edin."
         },
         "reports": {
-          "title": "Güçlü Görsel Raporlar",
-          "description": "Verilerinizi dinamik, kolay okunur satış, stok ve sipariş raporlarına dönüştürün."
+          "title": "Gerçek Kâr Analizi",
+          "description": "Tahmini ve gerçek kârınızı anlık olarak karşılaştırın, doğru kararları veriye dayalı alın."
         },
         "multiStore": {
-          "title": "Tek Panelden Çoklu Mağaza Yönetimi",
-          "description": "Tüm mağazalarınızı tek bir sade panelden yönetin. Sekmeler arasında dolaşmaya son — tam kontrol sizde."
+          "title": "Tek Panelden Tüm Operasyon",
+          "description": "Tüm mağazalarınızı, siparişlerinizi ve süreçlerinizi tek bir merkezden yönetin."
         }
       },
       "quote": {
-        "text": "“ Syncrosale'de sadece ürün geliştirmiyoruz — vizyon ile uygulama arasında senkron anlar yaratıyoruz. Misyonumuz, cesur düşünürleri güçlendirmek ve inovasyonun gerçek dünya etkisiyle buluşma şeklini yeniden tanımlamak. ”",
-        "author": "Sarper Celebi",
+        "text": "“ Syncrosale'de sadece yazılım üretmiyoruz — operasyonları sadeleştiriyoruz. Misyonumuz, Amazon satıcılarının karmaşık süreçlerini otomasyona dönüştürmek ve ölçeklenebilir bir yapı sunmak. ”",
+        "author": "Sarper Çelebi",
         "role": "Kurucu & CEO, Syncrosale"
       }
     },
     "contact": {
-      "title": "Haydi Konuşalım",
-      "subtitle": "Aklında bir proje mi var yoksa sadece selam vermek mi istiyorsun? Bizimle iletişime geç — senden haber almayı çok isteriz.",
+      "title": "Bizimle İletişime Geç",
+      "subtitle": "Syncrosale hakkında daha fazla bilgi almak veya erken erişim talep etmek için bize ulaşın.",
       "form": {
-        "name": "İsim",
+        "name": "Ad Soyad",
         "email": "E-posta",
         "subject": "Konu",
-        "message": "Mesaj",
-        "submit": "Mesaj Gönder"
+        "message": "Mesajınız",
+        "submit": "Gönder"
       }
     },
-    "error": {
-      "title": "Bir şeyler ters gitti",
-      "subtitle": "Aradığınız sayfa mevcut değil veya beklenmeyen bir hata oluştu.",
-      "goHome": "Ana Sayfaya Dön"
+    "features": {
+      "hero": {
+        "title": "Amazon Satıcıları İçin Tasarlandı",
+        "subtitle": "SyncroSale ile satın alma, kâr takibi ve depo operasyonlarını tek bir platformda yönetin.",
+        "cta": "Erken Erişim Talep Et"
+      },
+      "items": {
+        "inventory": {
+          "title": "Envanter Yönetimi",
+          "description": "SyncroSale, mağaza envanterinizi hızlı ve verimli bir şekilde yönetmenizi sağlar. Gelişmiş filtreleme sayesinde ürünlerinizi marka, kategori, fiyat ve stok aralıklarına göre kolayca listeleyebilirsiniz. Toplu işlemler ile ürünlerinizi tek tek düzenlemek zorunda kalmadan yönetebilir, belirli kategorilerdeki ürünleri kaldırabilir veya özel listelere ekleyebilirsiniz. Fiyat ve stok bazlı kurallar oluşturarak otomatik fiyatlandırma süreçlerinizi kontrol altına alabilirsiniz. Tüm ürün detaylarına — görseller, başlıklar, fiyat, stok ve marka bilgileri dahil — tek bir panel üzerinden anında erişebilirsiniz."
+        },
+        "search": {
+          "title": "Gelişmiş Arama Konsolu",
+          "description": "SyncroSale’ın kullanıcı dostu arama konsolu ile ihtiyacınız olan ürünleri saniyeler içinde bulun. Gelişmiş filtreleme yapısı sayesinde ürünleri detaylı kriterlere göre daraltabilir ve doğru ürünlere hızlıca ulaşabilirsiniz. Stok seviyeleri, performans metrikleri ve trend verileri üzerinden daha bilinçli kararlar alabilirsiniz. Sipariş bazlı filtreleme ve bildirim sistemi sayesinde gelen siparişleri anında tespit ederek süreçlerinizi aksatmadan yönetebilirsiniz."
+        },
+        "orders": {
+          "title": "Sipariş Takibi",
+          "description": "SyncroSale, gönderdiğiniz her siparişi uçtan uca takip etmenizi sağlar. Siparişin ne zaman teslim edildiğini veya herhangi bir nedenle geri döndüğünü anlık olarak öğrenebilirsiniz. Teslim edilemeyen siparişler için sistem sizi otomatik olarak bilgilendirir ve süreci kontrol altında tutmanızı sağlar. Teslim edilen siparişler için zaman bilgisi kaydedilir ve isteğe bağlı bildirimlerle süreç sürekli takip edilir."
+        },
+        "upload": {
+          "title": "Ürün Yükleme",
+          "description": "SyncroSale ile ürün ekleme süreçlerinizi tamamen otomatik hale getirin. Dosya indirip yükleme zahmeti olmadan, seçtiğiniz ürünleri doğrudan mağazanıza aktarabilirsiniz. Ürünler sistem içerisinde işlenir, fiyat ve stok kurallarınıza göre optimize edilir ve satışa hazır şekilde mağazanıza gönderilir. Tüm süreç API entegrasyonu üzerinden otomatik olarak gerçekleşir."
+        }
+      },
+      "cta": {
+        "title": "Operasyonlarınızı Bugün Ölçeklendirin",
+        "subtitle": "Erken erişim kullanıcılarına katılın ve Amazon süreçlerinizi otomatikleştirin.",
+        "button": "Erken Erişim Talep Et"
+      }
     }
-  },
-  "languages": {
-    "english": "İngilizce",
-    "turkish": "Türkçe"
-  },
-  "changeLanguage": "Dili Değiştir",
-  "hello": "Merhaba",
-  "buttons": {
-    "close": "Kapat",
-    "open": "Aç"
   },
   "navigation": {
     "homepage": "Ana Sayfa",
-    "pricing": "Fiyatlandırma",
+    "pricing": "Erken Erişim",
     "contact": "İletişim",
-    "documentation": "Dokümantasyon",
-    "faq": "SSS",
-    "privacyPolicy": "Gizlilik Politikası",
-    "cookies": "Çerezler",
+    "privacyPolicy": "Gizlilik",
+    "features": "Özellikler",
+    "cookies": "Çerez Politikası",
     "dpa": "Veri İşleme Sözleşmesi"
   },
   "footer": {
-    "allRightsReserved": "© {{year}} Syncrosale. Tüm hakları saklıdır."
+    "allRightsReserved": "© {{year}} Syncrosale. Tüm hakları saklıdır.",
+    "company": "Syncrosale, SESA Shipping LLC tarafından işletilen bir yazılım platformudur."
   }
 }

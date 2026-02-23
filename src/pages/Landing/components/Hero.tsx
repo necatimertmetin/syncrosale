@@ -44,6 +44,9 @@ export const Hero = () => {
               sx={{ textTransform: "none" }}
               size="large"
               endIcon={<ChevronRightRoundedIcon />}
+              href="https://admin.syncrosale.com"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {translate("hero.loginButton")}
             </Button>

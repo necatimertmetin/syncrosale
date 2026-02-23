@@ -1,76 +1,91 @@
 {
   "pages": {
     "landing": {
-      "slogan": "Disrupt the Market, One Sync at a Time.",
+      "slogan": "Automate your Amazon operations end-to-end.",
       "hero": {
-        "loginButton": "Login"
+        "loginButton": "Go to Dashboard"
       },
       "section": {
-        "title": "Simple. Fast. Sync.",
-        "subtitle": "Bring all your sales channels together in a single flow. Get ready to make a difference with Syncrosale."
-      },
-      "quote": {
-        "text": "“ At Syncrosale, we don’t just build products — we create moments of synchronicity between vision and execution. Our mission is to empower bold thinkers and reshape the way innovation connects with real-world impact. ”",
-        "author": "Sarper Celebi",
-        "role": "Founder & CEO, Syncrosale"
+        "title": "Simple. Fast. In Control.",
+        "subtitle": "Manage purchasing, warehouse flow, and profit tracking in one unified system. Eliminate operational chaos with Syncrosale."
       },
       "features": {
         "tracking": {
           "title": "Real-Time Order Tracking",
-          "description": "Stay on top of every incoming order with instant updates and lightning-fast visibility."
+          "description": "Monitor every order instantly and detect issues before they become problems."
         },
         "stockSync": {
-          "title": "Smart Product & Stock Sync",
-          "description": "Keep all your listings and inventory perfectly in sync — across all platforms, automatically."
+          "title": "Smart Inventory Management",
+          "description": "Automatically sync your listings and stock across all platforms with precision."
         },
         "reports": {
-          "title": "Powerful Visual Reports",
-          "description": "Turn your data into insights with dynamic, easy-to-read sales, stock, and order reports."
+          "title": "Real Profit Insights",
+          "description": "Compare estimated vs actual profit in real-time and make data-driven decisions."
         },
         "multiStore": {
-          "title": "Unified Multi-Store Management",
-          "description": "Manage all your stores from one clean dashboard. No more switching tabs — just full control."
+          "title": "Centralized Operations",
+          "description": "Manage all your stores, orders, and workflows from a single dashboard."
         }
+      },
+      "quote": {
+        "text": "“ At Syncrosale, we don’t just build software — we simplify operations. Our mission is to turn complex Amazon workflows into scalable, automated systems. ”",
+        "author": "Sarper Celebi",
+        "role": "Founder & CEO, Syncrosale"
       }
     },
     "contact": {
-      "title": "Let’s Talk",
-      "subtitle": "Have a project in mind or just want to say hi? Reach out — we’d love to hear from you.",
+      "title": "Get in Touch",
+      "subtitle": "Reach out to learn more about Syncrosale or request early access.",
       "form": {
-        "name": "Name",
+        "name": "Full Name",
         "email": "Email",
         "subject": "Subject",
-        "message": "Message",
+        "message": "Your Message",
         "submit": "Send Message"
       }
     },
-    "error": {
-      "title": "Something went wrong",
-      "subtitle": "The page you're looking for doesn’t exist or an unexpected error occurred.",
-      "goHome": "Go Back Home"
+    "features": {
+      "hero": {
+        "title": "Built for Amazon Operators",
+        "subtitle": "Manage purchasing, profit tracking, and warehouse operations in one unified platform.",
+        "cta": "Request Early Access"
+      },
+      "items": {
+        "inventory": {
+          "title": "Inventory Management",
+          "description": "SyncroSale enables you to manage your store inventory quickly and efficiently. With advanced filtering, you can easily list products by brand, category, price, and stock range. Perform bulk actions to manage products at scale, remove items from specific categories, or organize them into custom lists. Set pricing and stock rules to automate your workflows. Access all product details — including images, titles, prices, stock, and brand — from a single dashboard."
+        },
+        "search": {
+          "title": "Advanced Search Console",
+          "description": "Find the products you need in seconds with SyncroSale’s user-friendly search console. Narrow down results using detailed filters and quickly identify the right products. Gain insights through stock levels, performance metrics, and trends. With order-based filtering and smart notifications, you can instantly detect and process incoming orders without missing anything."
+        },
+        "orders": {
+          "title": "Order Tracking",
+          "description": "SyncroSale allows you to track every order end-to-end. Instantly see when an order is delivered or returned for any reason. The system automatically detects failed deliveries and notifies you, ensuring full control over your operations. Delivery times are recorded, and optional notifications keep you updated at every stage."
+        },
+        "upload": {
+          "title": "Product Upload Automation",
+          "description": "Automate your product listing process with SyncroSale. Add products directly to your store without downloading or uploading files. Products are processed within the system, optimized based on your pricing and stock rules, and pushed to your store ready for sale. All operations are handled via API integration, saving time and reducing manual work."
+        }
+      },
+      "cta": {
+        "title": "Start Scaling Today",
+        "subtitle": "Join early users and automate your Amazon operations.",
+        "button": "Request Early Access"
+      }
     }
   },
-  "languages": {
-    "english": "English",
-    "turkish": "Turkish"
-  },
-  "changeLanguage": "Change Language",
-  "hello": "Hello",
-  "buttons": {
-    "close": "Close",
-    "open": "Open"
-  },
   "navigation": {
-    "homepage": "Homepage",
-    "pricing": "Pricing",
+    "homepage": "Home",
+    "pricing": "Early Access",
     "contact": "Contact",
-    "documentation": "Documentation",
-    "faq": "FAQ",
     "privacyPolicy": "Privacy Policy",
-    "cookies": "Cookies",
+    "features": "Features",
+    "cookies": "Cookie Policy",
     "dpa": "Data Processing Addendum"
   },
   "footer": {
-    "allRightsReserved": "© {{year}} Syncrosale. All rights reserved."
+    "allRightsReserved": "© {{year}} Syncrosale. All rights reserved.",
+    "company": "Syncrosale is a software platform operated by SESA Shipping LLC."
   }
 }

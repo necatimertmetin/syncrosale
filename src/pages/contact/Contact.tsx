@@ -91,6 +91,12 @@ ${form.message}`,
                 <LocationOn color="primary" />
                 <Typography>Edgewater, NJ 07020</Typography>
               </Stack>
+              <Stack direction="row" spacing={2} alignItems="center">
+                <Typography variant="caption" sx={{ opacity: 0.6 }}>
+                  SyncroSale is a software platform operated by SESA Shipping
+                  LLC.
+                </Typography>
+              </Stack>
             </Stack>
           </MotionStack>
         </EnterAnimation2>
