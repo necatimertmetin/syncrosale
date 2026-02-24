@@ -65,6 +65,9 @@ export const Footer: React.FC = () => {
 
         <Divider sx={{ width: "80%", opacity: 0.2 }} />
 
+        <Typography variant="caption" color="text.secondary">
+          SyncroSale is a software platform operated by SESA Shipping LLC.
+        </Typography>
         <Typography
           variant="body2"
           color="text.secondary"
