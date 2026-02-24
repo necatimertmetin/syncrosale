@@ -73,6 +73,31 @@
         "subtitle": "Join early users and automate your Amazon operations.",
         "button": "Request Early Access"
       }
+    },
+    "pricing": {
+      "hero": {
+        "title": "Automate Your Amazon Operations End-to-End",
+        "subtitle": "SyncroSale handles purchasing, warehouse flow, and profit tracking — so you can scale without chaos."
+      },
+      "features": [
+        "Track real profit in real-time",
+        "Automate order & purchasing flow",
+        "Manage warehouse lifecycle",
+        "Scale without operational chaos"
+      ],
+      "plan": {
+        "title": "Free Trial",
+        "price": "Free",
+        "description": "Get early access to SyncroSale and start automating your Amazon operations.",
+        "features": [
+          "Real-time profit tracking (Actual vs Estimated)",
+          "Automated purchasing & checkout",
+          "Warehouse & order lifecycle tracking",
+          "Amazon integration ready"
+        ],
+        "cta": "Request Early Access"
+      },
+      "trust": "Built for modern Amazon sellers who want clarity, automation, and scalability."
     }
   },
   "navigation": {

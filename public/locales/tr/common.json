@@ -73,6 +73,31 @@
         "subtitle": "Erken erişim kullanıcılarına katılın ve Amazon süreçlerinizi otomatikleştirin.",
         "button": "Erken Erişim Talep Et"
       }
+    },
+    "pricing": {
+      "hero": {
+        "title": "Amazon Operasyonlarını Uçtan Uca Otomatikleştir",
+        "subtitle": "SyncroSale satın alma, depo yönetimi ve kâr takibini yönetir — sen sadece ölçeklemeye odaklan."
+      },
+      "features": [
+        "Gerçek kârı anlık takip et",
+        "Sipariş ve satın alma sürecini otomatikleştir",
+        "Depo süreçlerini yönet",
+        "Operasyonel karmaşa olmadan büyü"
+      ],
+      "plan": {
+        "title": "Ücretsiz Deneme",
+        "price": "Ücretsiz",
+        "description": "SyncroSale’e erken erişim elde et ve Amazon operasyonlarını otomatikleştirmeye başla.",
+        "features": [
+          "Gerçek zamanlı kâr takibi (Actual vs Estimated)",
+          "Otomatik satın alma ve checkout",
+          "Depo ve sipariş yaşam döngüsü takibi",
+          "Amazon entegrasyonu hazır"
+        ],
+        "cta": "Erken Erişim Talep Et"
+      },
+      "trust": "Modern Amazon satıcıları için: netlik, otomasyon ve ölçeklenebilirlik."
     }
   },
   "navigation": {

@@ -118,7 +118,7 @@ export const Pricing = () => {
                 size="large"
                 fullWidth
                 onClick={() => {
-                  window.location.href = `mailto:contact@syncrosale.com?subject=Early Access Request - SyncroSale&body=${encodeURIComponent(
+                  window.location.href = `mailto:info@sesashipping.com?subject=Early Access Request - SyncroSale&body=${encodeURIComponent(
                     `Hi SyncroSale Team,
 
 I would like to request early access to SyncroSale.
