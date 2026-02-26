@@ -35,13 +35,37 @@
     },
     "contact": {
       "title": "Get in Touch",
-      "subtitle": "Reach out to learn more about Syncrosale or request early access.",
+      "subtitle": "Reach out to learn more about Syncrosale or request early access",
+      "companyNote": "SyncroSale is a software platform operated by SESA Shipping LLC.",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "addressLabel": "Address",
+      "address": "Edgewater, NJ 07020",
       "form": {
+        "title": "Send Message",
         "name": "Full Name",
         "email": "Email",
         "subject": "Subject",
         "message": "Your Message",
         "submit": "Send Message"
+      }
+    },
+    "support": {
+      "title": "Support",
+      "subtitle": "Our support team is here to help you with technical issues, account questions, and integrations.",
+      "companyNote": "SyncroSale is a software platform operated by SESA Shipping LLC.",
+      "emailLabel": "Support Email",
+      "phoneLabel": "Support Phone",
+      "addressLabel": "Office",
+      "address": "Edgewater, NJ 07020",
+      "languages": "Supported languages: English, Turkish",
+      "form": {
+        "title": "Submit a Request",
+        "name": "Full Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Describe your issue",
+        "submit": "Submit Request"
       }
     },
     "features": {
@@ -98,6 +122,11 @@
         "cta": "Request Early Access"
       },
       "trust": "Built for modern Amazon sellers who want clarity, automation, and scalability."
+    },
+    "error": {
+      "title": "Page Not Found",
+      "subtitle": "The page you are looking for does not exist or may have been moved.",
+      "goHome": "Go to Homepage"
     }
   },
   "navigation": {
@@ -107,7 +136,8 @@
     "privacyPolicy": "Privacy Policy",
     "features": "Features",
     "cookies": "Cookie Policy",
-    "dpa": "Data Processing Addendum"
+    "dpa": "Data Processing Addendum",
+    "support": "Support"
   },
   "footer": {
     "allRightsReserved": "© {{year}} Syncrosale. All rights reserved.",

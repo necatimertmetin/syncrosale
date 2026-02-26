@@ -41,8 +41,15 @@ export const Routes: AppRoute[] = [
   },
   {
     path: "contact",
-    element: <Contact />,
+    element: <Contact mode="contact" />,
     label: "navigation.contact",
+    visibleOnHeader: true,
+    visibleOnFooter: true,
+  },
+  {
+    path: "help",
+    element: <Contact />,
+    label: "navigation.support",
     visibleOnHeader: true,
     visibleOnFooter: true,
   },

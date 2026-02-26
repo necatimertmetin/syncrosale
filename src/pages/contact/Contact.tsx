@@ -13,11 +13,34 @@ import { EnterAnimation2 } from "../../components/animated-components/div/EnterA
 import { useTranslation } from "../../providers/useTranslation";
 import { useState } from "react";
 
-export const Contact = () => {
+type ContactMode = "contact" | "support";
+
+type ContactProps = {
+  mode?: ContactMode;
+};
+
+export const Contact = ({ mode = "support" }: ContactProps) => {
   const theme = useTheme();
+
+  const linkStyle = {
+    textDecoration: "underline",
+    fontWeight: 500,
+    transition: "all 0.2s ease",
+    color: theme.palette.mode === "dark" ? theme.palette.grey[300] : "inherit",
+    "&:hover": {
+      color:
+        theme.palette.mode === "dark"
+          ? theme.palette.primary.light
+          : theme.palette.primary.main,
+    },
+  };
+
   const MotionBox = motion(Box);
   const MotionStack = motion(Stack);
-  const { translate } = useTranslation("pages.contact");
+
+  const { translate } = useTranslation(
+    mode === "support" ? "pages.support" : "pages.contact",
+  );
 
   const [form, setForm] = useState({
     name: "",
@@ -32,10 +55,15 @@ export const Contact = () => {
       setForm((prev) => ({ ...prev, [field]: e.target.value }));
     };
 
-  const handleSubmit = () => {
-    const mailTo = "info@sesashipping.com";
+  const email =
+    mode === "support" ? "support@syncrosale.com" : "info@sesashipping.com";
 
-    const subject = encodeURIComponent(form.subject || "Website Contact Form");
+  const phone = "+18624625050";
+
+  const handleSubmit = () => {
+    const subject = encodeURIComponent(
+      form.subject || (mode === "support" ? "Support Request" : "Contact Form"),
+    );
 
     const body = encodeURIComponent(
       `Name: ${form.name}
@@ -45,7 +73,7 @@ Message:
 ${form.message}`,
     );
 
-    window.location.href = `mailto:${mailTo}?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -56,7 +84,7 @@ ${form.message}`,
       spacing={10}
       sx={{ py: { xs: 8 } }}
     >
-      {/* SOL - CONTACT INFO */}
+      {/* SOL */}
       <Grid
         size={{ xs: 12, md: 5 }}
         display="flex"
@@ -69,11 +97,11 @@ ${form.message}`,
             sx={{ maxWidth: 420, color: theme.palette.text.primary }}
             initial={{ x: -80, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <Typography variant="h3" fontWeight={700}>
               {translate("title")}
             </Typography>
+
             <Typography variant="h6" fontWeight={300} sx={{ opacity: 0.8 }}>
               {translate("subtitle")}
             </Typography>
@@ -81,28 +109,42 @@ ${form.message}`,
             <Stack spacing={2} sx={{ pt: 3 }}>
               <Stack direction="row" spacing={2} alignItems="center">
                 <Email color="primary" />
-                <Typography>info@sesashipping.com</Typography>
+                <Typography
+                  component="a"
+                  href={`mailto:${email}`}
+                  sx={linkStyle}
+                >
+                  {email}
+                </Typography>
               </Stack>
+
               <Stack direction="row" spacing={2} alignItems="center">
                 <Phone color="primary" />
-                <Typography>+1 862 462 5050</Typography>
+                <Typography component="a" href={`tel:${phone}`} sx={linkStyle}>
+                  +1 862 462 5050
+                </Typography>
               </Stack>
+
               <Stack direction="row" spacing={2} alignItems="center">
                 <LocationOn color="primary" />
                 <Typography>Edgewater, NJ 07020</Typography>
               </Stack>
-              <Stack direction="row" spacing={2} alignItems="center">
-                <Typography variant="caption" sx={{ opacity: 0.6 }}>
-                  SyncroSale is a software platform operated by SESA Shipping
-                  LLC.
+
+              {mode === "support" && (
+                <Typography variant="body2" sx={{ opacity: 0.7 }}>
+                  {translate("languages")}
                 </Typography>
-              </Stack>
+              )}
+
+              <Typography variant="caption" sx={{ opacity: 0.6 }}>
+                SyncroSale is a software platform operated by SESA Shipping LLC.
+              </Typography>
             </Stack>
           </MotionStack>
         </EnterAnimation2>
       </Grid>
 
-      {/* SAG - FORM */}
+      {/* SAG */}
       <Grid
         size={{ xs: 12, md: 7 }}
         display="flex"
@@ -110,9 +152,6 @@ ${form.message}`,
         sx={{ px: { xs: 2, md: 4 } }}
       >
         <MotionBox
-          initial={{ x: 80, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
           sx={{
             width: "100%",
             maxWidth: 520,
@@ -123,7 +162,6 @@ ${form.message}`,
               theme.palette.mode === "dark"
                 ? "rgba(255,255,255,0.03)"
                 : "rgba(0,0,0,0.04)",
-            boxShadow: "0 0 25px rgba(0,0,0,0.08)",
           }}
         >
           <Typography variant="h5" fontWeight={600} mb={2}>

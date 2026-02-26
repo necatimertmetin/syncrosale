@@ -36,12 +36,36 @@
     "contact": {
       "title": "Bizimle İletişime Geç",
       "subtitle": "Syncrosale hakkında daha fazla bilgi almak veya erken erişim talep etmek için bize ulaşın.",
+      "companyNote": "SyncroSale, SESA Shipping LLC tarafından işletilen bir yazılım platformudur.",
+      "emailLabel": "E-posta",
+      "phoneLabel": "Telefon",
+      "addressLabel": "Adres",
+      "address": "Edgewater, NJ 07020",
       "form": {
+        "title": "Mesaj Gönder",
         "name": "Ad Soyad",
         "email": "E-posta",
         "subject": "Konu",
         "message": "Mesajınız",
         "submit": "Gönder"
+      }
+    },
+    "support": {
+      "title": "Destek",
+      "subtitle": "Teknik sorunlar, hesap işlemleri veya entegrasyonlar için destek ekibimizle iletişime geçin.",
+      "companyNote": "SyncroSale, SESA Shipping LLC tarafından işletilen bir yazılım platformudur.",
+      "emailLabel": "Destek E-postası",
+      "phoneLabel": "Destek Hattı",
+      "addressLabel": "Ofis",
+      "address": "Edgewater, NJ 07020",
+      "languages": "Desteklenen diller: İngilizce, Türkçe",
+      "form": {
+        "title": "Destek Talebi Oluştur",
+        "name": "Ad Soyad",
+        "email": "E-posta",
+        "subject": "Konu",
+        "message": "Sorununuzu açıklayın",
+        "submit": "Talep Gönder"
       }
     },
     "features": {
@@ -98,6 +122,11 @@
         "cta": "Erken Erişim Talep Et"
       },
       "trust": "Modern Amazon satıcıları için: netlik, otomasyon ve ölçeklenebilirlik."
+    },
+    "error": {
+      "title": "Sayfa Bulunamadı",
+      "subtitle": "Aradığınız sayfa mevcut değil veya taşınmış olabilir.",
+      "goHome": "Ana Sayfaya Dön"
     }
   },
   "navigation": {
@@ -107,7 +136,8 @@
     "privacyPolicy": "Gizlilik",
     "features": "Özellikler",
     "cookies": "Çerez Politikası",
-    "dpa": "Veri İşleme Sözleşmesi"
+    "dpa": "Veri İşleme Sözleşmesi",
+    "support": "Destek"
   },
   "footer": {
     "allRightsReserved": "© {{year}} Syncrosale. Tüm hakları saklıdır.",
