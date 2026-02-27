@@ -13,8 +13,7 @@ import { EnterAnimation2 } from "../../components/animated-components/div/EnterA
 import { useTranslation } from "../../providers/useTranslation";
 import { useState } from "react";
 
-type ContactMode = "contact" | "support";
-
+type ContactMode = "contact" | "support" | "security";
 type ContactProps = {
   mode?: ContactMode;
 };
@@ -39,7 +38,11 @@ export const Contact = ({ mode = "support" }: ContactProps) => {
   const MotionStack = motion(Stack);
 
   const { translate } = useTranslation(
-    mode === "support" ? "pages.support" : "pages.contact",
+    mode === "support"
+      ? "pages.support"
+      : mode === "security"
+        ? "pages.security"
+        : "pages.contact",
   );
 
   const [form, setForm] = useState({
@@ -56,17 +59,43 @@ export const Contact = ({ mode = "support" }: ContactProps) => {
     };
 
   const email =
-    mode === "support" ? "support@syncrosale.com" : "info@sesashipping.com";
+    mode === "support"
+      ? "support@syncrosale.com"
+      : mode === "security"
+        ? "security@syncrosale.com"
+        : "info@sesashipping.com";
 
   const phone = "+18624625050";
 
   const handleSubmit = () => {
     const subject = encodeURIComponent(
-      form.subject || (mode === "support" ? "Support Request" : "Contact Form"),
+      form.subject ||
+        (mode === "support"
+          ? "Support Request"
+          : mode === "security"
+            ? "Security Vulnerability Report"
+            : "Contact Form"),
     );
 
     const body = encodeURIComponent(
-      `Name: ${form.name}
+      mode === "security"
+        ? `Security Report
+
+Name: ${form.name}
+Email: ${form.email}
+
+Description:
+${form.message}
+
+Steps to Reproduce:
+-
+
+Impact:
+-
+
+Attachments:
+-`
+        : `Name: ${form.name}
 Email: ${form.email}
 
 Message:
@@ -105,7 +134,11 @@ ${form.message}`,
             <Typography variant="h6" fontWeight={300} sx={{ opacity: 0.8 }}>
               {translate("subtitle")}
             </Typography>
-
+            {mode === "security" && (
+              <Typography variant="body2" sx={{ opacity: 0.7 }}>
+                {translate("subtitleSecurity")}
+              </Typography>
+            )}
             <Stack spacing={2} sx={{ pt: 3 }}>
               <Stack direction="row" spacing={2} alignItems="center">
                 <Email color="primary" />

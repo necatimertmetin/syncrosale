@@ -68,6 +68,25 @@
         "submit": "Submit Request"
       }
     },
+    "security": {
+      "title": "Security Disclosure",
+      "subtitle": "If you believe you have discovered a security vulnerability in SyncroSale, we encourage you to report it responsibly.",
+      "subtitleSecurity": "Please include as much detail as possible: steps to reproduce, potential impact, and any relevant screenshots or logs.",
+      "companyNote": "SyncroSale is a software platform operated by SESA Shipping LLC.",
+      "emailLabel": "Security Email",
+      "phoneLabel": "Phone",
+      "addressLabel": "Office",
+      "address": "Edgewater, NJ 07020",
+      "responseTime": "We aim to review and respond to security reports as quickly as possible.",
+      "form": {
+        "title": "Submit a Security Report",
+        "name": "Full Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Describe the vulnerability in detail",
+        "submit": "Submit Report"
+      }
+    },
     "features": {
       "hero": {
         "title": "Built for Amazon Operators",
@@ -137,7 +156,8 @@
     "features": "Features",
     "cookies": "Cookie Policy",
     "dpa": "Data Processing Addendum",
-    "support": "Support"
+    "support": "Support",
+    "security": "Security"
   },
   "footer": {
     "allRightsReserved": "© {{year}} Syncrosale. All rights reserved.",

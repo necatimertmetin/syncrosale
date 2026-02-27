@@ -68,6 +68,24 @@
         "submit": "Talep Gönder"
       }
     },
+    "security": {
+      "title": "Güvenlik Bildirimi",
+      "subtitle": "SyncroSale'de olası bir güvenlik açığı keşfettiğinizi düşünüyorsanız, lütfen sorumlu bir şekilde bizimle paylaşın.",
+      "subtitleSecurity": "Lütfen mümkün olduğunca detaylı bilgi sağlayın: yeniden üretim adımları, etki ve varsa ekran görüntüleri veya loglar.",
+      "companyNote": "SyncroSale, SESA Shipping LLC tarafından işletilen bir yazılım platformudur.",
+      "emailLabel": "Güvenlik E-postası",
+      "phoneLabel": "Telefon",
+      "addressLabel": "Ofis",
+      "address": "Edgewater, NJ 07020",
+      "form": {
+        "title": "Güvenlik Raporu Gönder",
+        "name": "Ad Soyad",
+        "email": "E-posta",
+        "subject": "Konu",
+        "message": "Açığı detaylı şekilde açıklayın",
+        "submit": "Rapor Gönder"
+      }
+    },
     "features": {
       "hero": {
         "title": "Amazon Satıcıları İçin Tasarlandı",
@@ -137,7 +155,8 @@
     "features": "Özellikler",
     "cookies": "Çerez Politikası",
     "dpa": "Veri İşleme Sözleşmesi",
-    "support": "Destek"
+    "support": "Destek",
+    "security": "Güvenlik"
   },
   "footer": {
     "allRightsReserved": "© {{year}} Syncrosale. Tüm hakları saklıdır.",
