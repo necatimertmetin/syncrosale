@@ -9,14 +9,31 @@ import {
   Grid,
   Dialog,
   IconButton,
+  Chip,
 } from "@mui/material";
+import { motion } from "framer-motion";
+import { Link as RouterLink, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { useTranslation } from "../../providers/useTranslation";
-import { useState } from "react";
-import { features, type Feature } from "./config";
+import {
+  counts,
+  sections,
+  type FeatureSection,
+  type SectionKey,
+} from "./config";
+import { itemSlugs, sectionSlugs } from "./slugs";
+import {
+  AnalyticsVisual,
+  PricingVisual,
+  ShippingVisual,
+} from "./FeatureVisuals";
 
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import CloseIcon from "@mui/icons-material/Close";
+import VerifiedUserOutlinedIcon from "@mui/icons-material/VerifiedUserOutlined";
+
+const MotionBox = motion(Box);
 
 /* =========================
    MAIL HANDLER
@@ -40,86 +57,238 @@ Best regards,`,
   )}`;
 };
 
-/* =========================
-   FEATURE BLOCK
-========================= */
-type FeatureBlockProps = {
-  title: string;
-  desc: string;
-  images?: string[];
-  reverse?: boolean;
-  onOpen?: (imgs: string[]) => void;
+const visuals: Partial<Record<SectionKey, React.ReactNode>> = {
+  pricing: <PricingVisual />,
+  shipping: <ShippingVisual />,
+  analytics: <AnalyticsVisual />,
 };
 
-const FeatureBlock = ({
-  title,
-  desc,
-  images,
-  reverse,
+/* =========================
+   SECTION
+========================= */
+const titleLinkSx = {
+  color: "inherit",
+  textDecoration: "none",
+  "&:hover": { textDecoration: "underline" },
+} as const;
+
+type SectionBlockProps = {
+  section: FeatureSection;
+  targetId?: string;
+  index: number;
+  onOpen: (imgs: string[], start: number) => void;
+};
+
+const SectionBlock = ({
+  section,
+  index,
+  targetId,
   onOpen,
-}: FeatureBlockProps) => {
+}: SectionBlockProps) => {
   const theme = useTheme();
+  const { translate } = useTranslation("pages.features.sections");
+  const { translate: label } = useTranslation("pages.features.labels");
+  const { key, icons } = section;
+  const itemList = Array.from({ length: counts[key].items }, (_, i) => i);
+  const stepList = Array.from({ length: counts[key].steps }, (_, i) => i);
+  const slugs = itemSlugs[key];
+  const linkTo = (slug?: string) =>
+    `/features/${sectionSlugs[key]}${slug ? `/${slug}` : ""}`;
+  const highlight = (id: string) =>
+    targetId === id
+      ? { outline: `2px solid ${theme.palette.primary.main}`, outlineOffset: 2 }
+      : {};
+  const reverse = index % 2 === 1;
+  const images = section.images
+    ? theme.palette.mode === "dark"
+      ? section.images.dark
+      : section.images.light
+    : undefined;
 
   return (
-    <Grid
-      container
-      spacing={8}
-      alignItems="center"
-      direction={reverse ? "row-reverse" : "row"}
-      sx={{ mb: 16 }}
+    <Box
+      component="section"
+      id={key}
+      sx={{ scrollMarginTop: 24, mb: { xs: 12, md: 16 } }}
     >
-      {/* TEXT */}
-      <Grid size={{ xs: 12, md: images ? 6 : 12 }}>
-        <Stack spacing={3}>
-          <Typography variant="h4" fontWeight={700}>
-            {title}
-          </Typography>
-
-          <Typography sx={{ opacity: 0.7, fontSize: 16 }}>{desc}</Typography>
-        </Stack>
-      </Grid>
-
-      {/* IMAGE */}
-      {images && (
-        <Grid size={{ xs: 12, md: 6 }}>
-          <Card
-            onClick={() => onOpen?.(images)}
+      <MotionBox
+        initial={{ y: 30, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 0.5 }}
+      >
+        {/* HEADER */}
+        <Stack spacing={2} mb={6} maxWidth={760}>
+          <Typography
+            variant="overline"
             sx={{
-              p: 2,
-              borderRadius: 4,
-              cursor: "pointer",
-              background: theme.palette.background.paper,
-              border: `1px solid ${theme.palette.primary.main}`,
-              boxShadow: "0 0 40px rgba(4,200,200,0.2)",
-              transition: "0.3s",
-              "&:hover": {
-                transform: "scale(1.02)",
-              },
+              color: theme.palette.primary.main,
+              fontWeight: 700,
+              letterSpacing: 2,
             }}
           >
-            {images.length > 1 ? (
-              <Grid container spacing={1}>
-                {images.slice(0, 6).map((img) => (
-                  <Grid size={{ xs: 4 }} key={img}>
+            {String(index + 1).padStart(2, "0")}
+          </Typography>
+          <Typography
+            variant="h3"
+            fontWeight={800}
+            component={RouterLink}
+            to={linkTo()}
+            sx={titleLinkSx}
+          >
+            {translate(`${key}.title`)}
+          </Typography>
+          <Typography sx={{ opacity: 0.75, fontSize: 18 }}>
+            {translate(`${key}.intro`)}
+          </Typography>
+        </Stack>
+
+        {/* HOW IT WORKS */}
+        <Typography
+          variant="overline"
+          sx={{ opacity: 0.6, fontWeight: 700, letterSpacing: 2 }}
+        >
+          {label("how")}
+        </Typography>
+        <Grid container spacing={2} sx={{ mt: 0.5, mb: 7 }}>
+          {stepList.map((i) => (
+            <Grid size={{ xs: 12, sm: 6, md: 12 / stepList.length }} key={i}>
+              <Box
+                id={`${key}-${slugs.steps[i]}`}
+                sx={{
+                  scrollMarginTop: 24,
+                  ...highlight(`${key}-${slugs.steps[i]}`),
+                  height: "100%",
+                  p: 2.5,
+                  borderRadius: 3,
+                  borderTop: `3px solid ${theme.palette.secondary.main}`,
+                  background: theme.palette.background.paper,
+                }}
+              >
+                <Typography
+                  fontWeight={800}
+                  sx={{ color: theme.palette.secondary.main, mb: 0.5 }}
+                >
+                  {i + 1}
+                </Typography>
+                <Typography
+                  fontWeight={700}
+                  mb={0.5}
+                  component={RouterLink}
+                  to={linkTo(slugs.steps[i])}
+                  sx={{ ...titleLinkSx, display: "block" }}
+                >
+                  {translate(`${key}.steps.s${i + 1}.title`)}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{ opacity: 0.75, lineHeight: 1.6 }}
+                >
+                  {translate(`${key}.steps.s${i + 1}.description`)}
+                </Typography>
+              </Box>
+            </Grid>
+          ))}
+        </Grid>
+
+        <Typography
+          variant="overline"
+          sx={{ opacity: 0.6, fontWeight: 700, letterSpacing: 2 }}
+        >
+          {label("can")}
+        </Typography>
+
+        <Grid
+          container
+          spacing={4}
+          direction={reverse ? "row-reverse" : "row"}
+          alignItems="flex-start"
+          sx={{ mt: 0 }}
+        >
+          {/* ITEMS */}
+          <Grid size={{ xs: 12, md: 7 }}>
+            <Grid container spacing={2}>
+              {itemList.map((i) => {
+                const Icon = icons[i % icons.length];
+                return (
+                <Grid size={{ xs: 12, sm: 6 }} key={i}>
+                  <Card
+                    id={`${key}-${slugs.items[i]}`}
+                    sx={{
+                      scrollMarginTop: 24,
+                      ...highlight(`${key}-${slugs.items[i]}`),
+                      p: 2.5,
+                      height: "100%",
+                      borderRadius: 3,
+                      background: theme.palette.background.paper,
+                      border: `1px solid ${theme.palette.divider}`,
+                      boxShadow: "none",
+                      transition: "0.3s",
+                      "&:hover": {
+                        borderColor: theme.palette.primary.main,
+                        transform: "translateY(-2px)",
+                      },
+                    }}
+                  >
+                    <Stack spacing={1.2}>
+                      <Icon sx={{ color: theme.palette.primary.main }} />
+                      <Typography
+                        fontWeight={700}
+                        component={RouterLink}
+                        to={linkTo(slugs.items[i])}
+                        sx={titleLinkSx}
+                      >
+                        {translate(`${key}.items.i${i + 1}.title`)}
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        sx={{ opacity: 0.75, lineHeight: 1.6 }}
+                      >
+                        {translate(`${key}.items.i${i + 1}.description`)}
+                      </Typography>
+                    </Stack>
+                  </Card>
+                </Grid>
+                );
+              })}
+            </Grid>
+          </Grid>
+
+          {/* VISUAL */}
+          <Grid size={{ xs: 12, md: 5 }} sx={{ position: { md: "sticky" }, top: 24 }}>
+            {images ? (
+              <Stack spacing={2}>
+                {images.map((img, i) => (
+                  <Card
+                    key={img}
+                    onClick={() => onOpen(images, i)}
+                    sx={{
+                      p: 1.5,
+                      borderRadius: 4,
+                      cursor: "pointer",
+                      background: theme.palette.background.paper,
+                      border: `1px solid ${theme.palette.primary.main}`,
+                      boxShadow: "0 0 40px rgba(4,200,200,0.2)",
+                      transition: "0.3s",
+                      "&:hover": { transform: "scale(1.02)" },
+                    }}
+                  >
                     <Box
                       component="img"
                       src={img}
-                      sx={{ width: "100%", borderRadius: 1 }}
+                      alt={translate(`${key}.title`)}
+                      sx={{ width: "100%", borderRadius: 2, display: "block" }}
                     />
-                  </Grid>
+                  </Card>
                 ))}
-              </Grid>
+              </Stack>
             ) : (
-              <Box
-                component="img"
-                src={images[0]}
-                sx={{ width: "100%", borderRadius: 2 }}
-              />
+              visuals[key]
             )}
-          </Card>
+          </Grid>
         </Grid>
-      )}
-    </Grid>
+      </MotionBox>
+    </Box>
   );
 };
 
@@ -129,65 +298,127 @@ const FeatureBlock = ({
 export const Features = () => {
   const { translate } = useTranslation("pages.features");
   const theme = useTheme();
+  const { section, item } = useParams();
 
   const [open, setOpen] = useState(false);
   const [activeImages, setActiveImages] = useState<string[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const getImages = (feature: Feature): string[] | undefined => {
-    if (!feature.images) return undefined;
+  // Deep links: /#/features/<section> and /#/features/<section>/<title>
+  const sectionKey = sections.find((s) => sectionSlugs[s.key] === section)?.key;
+  const targetId = sectionKey
+    ? item
+      ? `${sectionKey}-${item}`
+      : sectionKey
+    : undefined;
 
-    return theme.palette.mode === "dark"
-      ? feature.images.dark
-      : feature.images.light;
-  };
+  useEffect(() => {
+    if (!targetId) {
+      window.scrollTo({ top: 0 });
+      return;
+    }
+    const timer = window.setTimeout(() => {
+      document
+        .getElementById(targetId)
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 200);
+    return () => window.clearTimeout(timer);
+  }, [targetId]);
 
-  const handleOpen = (imgs: string[]) => {
+  const handleOpen = (imgs: string[], start: number) => {
     setActiveImages(imgs);
-    setCurrentIndex(0);
+    setCurrentIndex(start);
     setOpen(true);
   };
 
-  const handleNext = () => {
-    setCurrentIndex((prev) =>
-      prev === activeImages.length - 1 ? 0 : prev + 1,
-    );
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? activeImages.length - 1 : prev - 1,
-    );
-  };
+  const handleNext = () =>
+    setCurrentIndex((p) => (p === activeImages.length - 1 ? 0 : p + 1));
+  const handlePrev = () =>
+    setCurrentIndex((p) => (p === 0 ? activeImages.length - 1 : p - 1));
 
   return (
-    <Container maxWidth="lg" sx={{ py: 14 }}>
+    <Container
+      maxWidth="xl"
+      sx={{ py: { xs: 8, md: 14 }, px: { xs: 2, md: 6, xl: 10 } }}
+    >
       {/* HERO */}
-      <Stack spacing={3} textAlign="center" alignItems="center" mb={14}>
+      <Stack spacing={3} textAlign="center" alignItems="center" mb={8}>
+        <Chip
+          icon={<VerifiedUserOutlinedIcon />}
+          label={translate("hero.badge")}
+          color="secondary"
+          variant="outlined"
+        />
         <Typography variant="h2" fontWeight={800}>
           {translate("hero.title")}
         </Typography>
-
-        <Typography sx={{ opacity: 0.7, maxWidth: 700 }}>
+        <Typography sx={{ opacity: 0.7, maxWidth: 760, fontSize: 18 }}>
           {translate("hero.subtitle")}
         </Typography>
-
         <Button variant="contained" size="large" onClick={mailtoHandler}>
           {translate("hero.cta")}
         </Button>
       </Stack>
 
-      {/* FEATURES */}
-      {features.map((feature, index) => (
-        <FeatureBlock
-          key={feature.key}
-          title={translate(`items.${feature.key}.title`)}
-          desc={translate(`items.${feature.key}.description`)}
-          images={getImages(feature)}
-          reverse={index % 2 === 1}
+      {/* SECTION NAV */}
+      <Stack
+        direction="row"
+        spacing={1.5}
+        justifyContent="center"
+        flexWrap="wrap"
+        useFlexGap
+        mb={14}
+      >
+        {sections.map((s) => (
+          <Chip
+            key={s.key}
+            component={RouterLink}
+            to={`/features/${sectionSlugs[s.key]}`}
+            clickable
+            label={translate(`sections.${s.key}.nav`)}
+            variant="outlined"
+            color="primary"
+            sx={{ fontWeight: 600, px: 1 }}
+          />
+        ))}
+      </Stack>
+
+      {/* SECTIONS */}
+      {sections.map((s, i) => (
+        <SectionBlock
+          key={s.key}
+          section={s}
+          index={i}
+          targetId={targetId}
           onOpen={handleOpen}
         />
       ))}
+
+      {/* DATA ACCESS */}
+      <Box
+        sx={{
+          p: { xs: 3, md: 5 },
+          mb: 10,
+          borderRadius: 5,
+          border: `2px solid ${theme.palette.secondary.main}`,
+          textAlign: "center",
+        }}
+      >
+        <Typography variant="h4" fontWeight={700} mb={2}>
+          {translate("data.title")}
+        </Typography>
+        <Typography sx={{ opacity: 0.75, maxWidth: 800, mx: "auto", mb: 3 }}>
+          {translate("data.description")}
+        </Typography>
+        <Stack direction="row" spacing={2} justifyContent="center">
+          <Button component={RouterLink} to="/privacy" variant="outlined">
+            {translate("data.privacy")}
+          </Button>
+          <Button component={RouterLink} to="/dpa" variant="outlined">
+            {translate("data.dpa")}
+          </Button>
+        </Stack>
+      </Box>
 
       {/* MODAL VIEWER */}
       <Dialog
@@ -203,7 +434,6 @@ export const Features = () => {
             position: "relative",
           }}
         >
-          {/* CLOSE */}
           <IconButton
             onClick={() => setOpen(false)}
             sx={{ position: "absolute", top: 10, right: 10 }}
@@ -211,21 +441,19 @@ export const Features = () => {
             <CloseIcon />
           </IconButton>
 
-          {/* MAIN IMAGE */}
           {activeImages.length > 0 && (
             <Box
               component="img"
               src={activeImages[currentIndex]}
               sx={{
                 width: "100%",
-                maxHeight: "70vh",
+                maxHeight: "75vh",
                 objectFit: "contain",
                 borderRadius: 2,
               }}
             />
           )}
 
-          {/* NAV BUTTONS */}
           {activeImages.length > 1 && (
             <>
               <IconButton
@@ -239,7 +467,6 @@ export const Features = () => {
               >
                 <ChevronLeftIcon />
               </IconButton>
-
               <IconButton
                 onClick={handleNext}
                 sx={{
@@ -253,31 +480,6 @@ export const Features = () => {
               </IconButton>
             </>
           )}
-
-          {/* THUMBNAILS */}
-          {activeImages.length > 1 && (
-            <Grid container spacing={1} mt={2}>
-              {activeImages.map((img, i) => (
-                <Grid size={{ xs: 2 }} key={img}>
-                  <Box
-                    component="img"
-                    src={img}
-                    onClick={() => setCurrentIndex(i)}
-                    sx={{
-                      width: "100%",
-                      cursor: "pointer",
-                      borderRadius: 1,
-                      border:
-                        i === currentIndex
-                          ? `2px solid ${theme.palette.primary.main}`
-                          : "2px solid transparent",
-                      opacity: i === currentIndex ? 1 : 0.6,
-                    }}
-                  />
-                </Grid>
-              ))}
-            </Grid>
-          )}
         </Box>
       </Dialog>
 
@@ -286,11 +488,9 @@ export const Features = () => {
         <Typography variant="h4" fontWeight={700} mb={2}>
           {translate("cta.title")}
         </Typography>
-
         <Typography sx={{ opacity: 0.7, mb: 3 }}>
           {translate("cta.subtitle")}
         </Typography>
-
         <Button variant="contained" size="large" onClick={mailtoHandler}>
           {translate("cta.button")}
         </Button>
