@@ -1,76 +1,432 @@
 {
   "pages": {
     "landing": {
-      "slogan": "Pazarı değiştir, senkronla geleceği yakala.",
+      "slogan": "Amazon operasyonlarını uçtan uca otomatikleştir.",
       "hero": {
-        "loginButton": "Giriş Yap"
+        "loginButton": "Panele Git"
       },
       "section": {
-        "title": "Basit. Hızlı. Senkron.",
-        "subtitle": "Tüm satış kanallarınız tek bir akışta buluşsun. Syncrosale ile fark yaratmaya hazır olun."
+        "title": "Basit. Hızlı. Kontrol Sende.",
+        "subtitle": "Satın alma, depo yönetimi ve kâr takibini tek bir akışta yönetin. Syncrosale ile operasyonel karmaşayı ortadan kaldırın."
       },
       "features": {
         "tracking": {
           "title": "Gerçek Zamanlı Sipariş Takibi",
-          "description": "Tüm gelen siparişleri anlık bildirimlerle takip edin, her şeye ışık hızında hakim olun."
+          "description": "Tüm siparişlerinizi anlık olarak izleyin, gecikmeleri ve sorunları oluşmadan yakalayın."
         },
         "stockSync": {
-          "title": "Akıllı Ürün ve Stok Senkronizasyonu",
-          "description": "Tüm platformlardaki listelemelerinizi ve stoklarınızı otomatik olarak mükemmel şekilde senkron tutun."
+          "title": "Akıllı Stok ve Ürün Yönetimi",
+          "description": "Tüm listelemelerinizi ve stoklarınızı platformlar arasında otomatik olarak senkronize edin."
         },
         "reports": {
-          "title": "Güçlü Görsel Raporlar",
-          "description": "Verilerinizi dinamik, kolay okunur satış, stok ve sipariş raporlarına dönüştürün."
+          "title": "Gerçek Kâr Analizi",
+          "description": "Tahmini ve gerçek kârınızı anlık olarak karşılaştırın, doğru kararları veriye dayalı alın."
         },
         "multiStore": {
-          "title": "Tek Panelden Çoklu Mağaza Yönetimi",
-          "description": "Tüm mağazalarınızı tek bir sade panelden yönetin. Sekmeler arasında dolaşmaya son — tam kontrol sizde."
+          "title": "Tek Panelden Tüm Operasyon",
+          "description": "Tüm mağazalarınızı, siparişlerinizi ve süreçlerinizi tek bir merkezden yönetin."
         }
       },
       "quote": {
-        "text": "“ Syncrosale'de sadece ürün geliştirmiyoruz — vizyon ile uygulama arasında senkron anlar yaratıyoruz. Misyonumuz, cesur düşünürleri güçlendirmek ve inovasyonun gerçek dünya etkisiyle buluşma şeklini yeniden tanımlamak. ”",
-        "author": "Sarper Celebi",
+        "text": "“ Syncrosale'de sadece yazılım üretmiyoruz — operasyonları sadeleştiriyoruz. Misyonumuz, Amazon satıcılarının karmaşık süreçlerini otomasyona dönüştürmek ve ölçeklenebilir bir yapı sunmak. ”",
+        "author": "Sarper Çelebi",
         "role": "Kurucu & CEO, Syncrosale"
       }
     },
     "contact": {
-      "title": "Haydi Konuşalım",
-      "subtitle": "Aklında bir proje mi var yoksa sadece selam vermek mi istiyorsun? Bizimle iletişime geç — senden haber almayı çok isteriz.",
+      "title": "Bizimle İletişime Geç",
+      "subtitle": "Syncrosale hakkında daha fazla bilgi almak veya erken erişim talep etmek için bize ulaşın.",
+      "companyNote": "SyncroSale, SESA Shipping LLC tarafından işletilen bir yazılım platformudur.",
+      "emailLabel": "E-posta",
+      "phoneLabel": "Telefon",
+      "addressLabel": "Adres",
+      "address": "Edgewater, NJ 07020",
       "form": {
-        "name": "İsim",
+        "title": "Mesaj Gönder",
+        "name": "Ad Soyad",
         "email": "E-posta",
         "subject": "Konu",
-        "message": "Mesaj",
-        "submit": "Mesaj Gönder"
+        "message": "Mesajınız",
+        "submit": "Gönder"
       }
     },
+    "support": {
+      "title": "Destek",
+      "subtitle": "Teknik sorunlar, hesap işlemleri veya entegrasyonlar için destek ekibimizle iletişime geçin.",
+      "companyNote": "SyncroSale, SESA Shipping LLC tarafından işletilen bir yazılım platformudur.",
+      "emailLabel": "Destek E-postası",
+      "phoneLabel": "Destek Hattı",
+      "addressLabel": "Ofis",
+      "address": "Edgewater, NJ 07020",
+      "languages": "Desteklenen diller: İngilizce, Türkçe",
+      "form": {
+        "title": "Destek Talebi Oluştur",
+        "name": "Ad Soyad",
+        "email": "E-posta",
+        "subject": "Konu",
+        "message": "Sorununuzu açıklayın",
+        "submit": "Talep Gönder"
+      }
+    },
+    "security": {
+      "title": "Güvenlik Bildirimi",
+      "subtitle": "SyncroSale'de olası bir güvenlik açığı keşfettiğinizi düşünüyorsanız, lütfen sorumlu bir şekilde bizimle paylaşın.",
+      "subtitleSecurity": "Lütfen mümkün olduğunca detaylı bilgi sağlayın: yeniden üretim adımları, etki ve varsa ekran görüntüleri veya loglar.",
+      "companyNote": "SyncroSale, SESA Shipping LLC tarafından işletilen bir yazılım platformudur.",
+      "emailLabel": "Güvenlik E-postası",
+      "phoneLabel": "Telefon",
+      "addressLabel": "Ofis",
+      "address": "Edgewater, NJ 07020",
+      "form": {
+        "title": "Güvenlik Raporu Gönder",
+        "name": "Ad Soyad",
+        "email": "E-posta",
+        "subject": "Konu",
+        "message": "Açığı detaylı şekilde açıklayın",
+        "submit": "Rapor Gönder"
+      }
+    },
+    "features": {
+      "hero": {
+        "title": "Amazon Satıcıları İçin Tasarlandı",
+        "subtitle": "SyncroSale, Selling Partner API (SP-API) üzerinden Amazon mağazanıza bağlanır; listeleme, stok, sipariş, fiyatlama, kargo ve kâr analizini tek yerden yönetir.",
+        "cta": "Erken Erişim Talep Et",
+        "badge": "Amazon SP-API ile bağlı"
+      },
+      "example": "Örnek görünüm",
+      "sections": {
+        "listing": {
+          "nav": "Listeleme, Stok & Sipariş",
+          "title": "Listeleme, Stok ve Sipariş Yönetimi",
+          "intro": "SyncroSale, Amazon mağazanızı yönetilen bir hatta çevirir. Hangi ürünlerin girebileceğine siz karar verirsiniz. SyncroSale ürünleri bulur, kurallarınıza göre kontrol eder, listeler ve düzenli tutar; ardından her siparişi satın almadan teslimata kadar takip eder.",
+          "items": {
+            "i1": {
+              "title": "Aşamaya göre stok",
+              "description": "Her ürünü hattaki yerine göre görün: keşif, filtreleme, onay bekleyen, Amazon'a aktarılan, aktif, pasif, eksik ve silinmiş. Durumu olmayan ürün yoktur."
+            },
+            "i2": {
+              "title": "Filtreler ve kayıtlı görünümler",
+              "description": "Buy Box ve rekabet verisi, satış sırası, satıcı sayıları, fiyat ve marj farkları, stok, tarih, kâr ve daha fazlasına göre filtreleyin. Her filtre setini ayrı sekme olarak kaydedin."
+            },
+            "i3": {
+              "title": "Net kriter dışı nedenleri",
+              "description": "Reddedilen her ürün nedenini söyler: kısıtlı marka, anahtar kelime, kategori veya ASIN, satış sırası yok, kaynak pazarda satılmıyor, FBA veya Amazon satıcısı var, satıcı sayısı çok az veya çok fazla."
+            },
+            "i4": {
+              "title": "Kısıtlamalar ve engelli ASIN'ler",
+              "description": "Kısıtlı marka, anahtar kelime, kategori ve ASIN listeleri tutun. Her pazaryeri için genel bir engelli ASIN listesi bulunur."
+            },
+            "i5": {
+              "title": "Politika uyarısı koruması",
+              "description": "Amazon politika uyarısı, ürün güvenliği bildirimi veya vaka kapanış bildirimi gönderdiğinde ne olacağını seçin: hiçbir şey yapma, stoktan kaldır, ürünü kaldır ve engelle, ürünü ve markasını kaldır ve engelle."
+            },
+            "i6": {
+              "title": "Ekleme ve kaldırma kuralları",
+              "description": "Yeni ürünlerin onaysız eklenmemesini, onayınızı istemesini veya filtrelerinize uyunca otomatik eklenmesini seçin. Kriterleri karşılamayı bırakan ürünlerin tutulup tutulmayacağını belirleyin."
+            },
+            "i7": {
+              "title": "Toplu işlem ve içe aktarma takibi",
+              "description": "Tek işlemde ASIN veya SKU ile 5.000 ürüne kadar ekleyin veya silin. İçe aktarma takibi her partiyi, ASIN bazında sonucu ve düşme nedenini gösterir."
+            },
+            "i8": {
+              "title": "Fiyat geçmişi",
+              "description": "Her fiyat değişikliğini tablo, defter veya denetim kaydı olarak inceleyin; maliyet dağılımı, komisyon, vergi, kur, hazırlık süresi, marjlar ve arkasındaki Buy Box ve en düşük teklifle birlikte."
+            },
+            "i9": {
+              "title": "Çoklu pazaryeri",
+              "description": "Her Amazon pazaryerini SP-API yetkilendirmesiyle ayrı bağlayın. Her mağaza kendi filtre ve ayarlarını tutar; süresi dolan yetki tek adımda yenilenir."
+            },
+            "i10": {
+              "title": "Gerçek işe uygun sipariş listesi",
+              "description": "Tüm siparişler, bekleyen işlemler, satın alınacaklar ve geciken siparişler için sekmeler. Renkli bayraklar oluşturun; alıcı, tarih, ASIN, takip numarası, durum, not veya satın almadan geçen güne göre arayın."
+            },
+            "i11": {
+              "title": "Bir siparişle ilgili her şey tek yerde",
+              "description": "Teslimat adresi, ürünler, tedarik siparişleri, notlar, depo paketleri ve olayı kimin tetiklediğine göre filtrelenebilen olay zaman çizelgesi: siz, Amazon, satıcı e-postası, depo veya sistem."
+            },
+            "i12": {
+              "title": "Siparişlerle eşleşen bildirim ve e-postalar",
+              "description": "Amazon'dan ve alıcı posta kutunuzdan gelen sipariş, gönderim, iptal, iade ve geri ödeme mesajları okunur ve doğru siparişle eşleştirilir. Eşleşmeyenler işlenmemiş kutusunda bekler, hiçbiri kaybolmaz."
+            },
+            "i13": {
+              "title": "Müşteri faturaları",
+              "description": "Faturayı düzenleyip önizleyin, şablon ve dil seçin, kalemleri, KDV oranını ve notları ayarlayın; yazdırın veya PDF kaydedin. Satıcı adresiniz ve logonuz mağaza ayarlarında bir kez girilir."
+            }
+          },
+          "steps": {
+            "s1": {
+              "title": "Ürün ekleme",
+              "description": "Mağazanıza tek seferde 5.000 ASIN'e kadar, isteğe bağlı SKU öneki ile ürün ekleyin."
+            },
+            "s2": {
+              "title": "Keşif",
+              "description": "SyncroSale her ASIN için Amazon verisini toplar. Bulunamayan ürünler nedeniyle birlikte raporlanır."
+            },
+            "s3": {
+              "title": "Filtreleme",
+              "description": "Filtreleriniz ve kısıtlamalarınız uygulanır. Geçemeyen ürünler tam nedeniyle Kriter Dışı'na düşer, diğerleri devam eder."
+            },
+            "s4": {
+              "title": "Listeleme",
+              "description": "Ayarınıza göre ürünler otomatik eklenir veya seçilenleri ya da tümünü onaylayana kadar Onay Bekleyenler'de durur."
+            }
+          }
+        },
+        "pricing": {
+          "nav": "Otomatik Fiyatlama",
+          "title": "Otomatik Fiyatlama",
+          "intro": "SyncroSale'de fiyatlama, sizin kontrol ettiğiniz kurallar bütünüdür. Her ürün için bir fiyat bandı hesaplar, fiyatı rekabete göre bu bandın içinde hareket ettirir ve sonucu stok ve hazırlık süresiyle birlikte Amazon'a gönderir.",
+          "items": {
+            "i1": {
+              "title": "Maliyet aralığına göre kâr kuralları",
+              "description": "İhtiyacınız kadar maliyet aralığı oluşturun. Her birinin kendi minimum, standart ve maksimum kâr yüzdesi vardır; varsayılan satır geri kalan her şeyi kapsar."
+            },
+            "i2": {
+              "title": "Buy Box veya en düşük fiyat",
+              "description": "Fiyatınızın hangi teklifle karşılaştırılacağını seçin. Eşitleyebilir veya belirlediğiniz değer kadar altına inebilirsiniz. Alışılmadık büyük bir indirim, kaydetmeden önce uyarı verir."
+            },
+            "i3": {
+              "title": "Buy Box uygunluk kontrolü",
+              "description": "Listedeki her teklifle değil, yalnızca Buy Box kazanmaya gerçekten uygun satıcılarla rekabet edin."
+            },
+            "i4": {
+              "title": "Yoksayma listesi",
+              "description": "Rekabet etmek istemediğiniz satıcı ID'lerini ekleyin. Fiyatlarınızı etkilemeyi bırakırlar."
+            },
+            "i5": {
+              "title": "Tek satıcı marjı",
+              "description": "Ürünü başka kimse satmıyorsa SyncroSale maksimum fiyatınıza seçtiğiniz ek yüzdeyi ekleyerek fiyatlar."
+            },
+            "i6": {
+              "title": "Buy Box yoksa yedek fiyat",
+              "description": "Listede o an Buy Box satıcısı yokken kullanılacak minimum, standart veya maksimum fiyatı seçin."
+            },
+            "i7": {
+              "title": "Fiyatların nasıl uygulanacağını siz seçersiniz",
+              "description": "Fiyatları akıllı fiyatlama ile sürekli güncel tutun veya ilk aktarımdan sonra fiyat güncellemelerini durdurun."
+            },
+            "i8": {
+              "title": "Kur, vergi ve komisyon",
+              "description": "Otomatik veya manuel kur kullanın, Amazon komisyon oranınızı girin ve gereken yerde ek yüzde artı sabit tutar olarak vergi kuralı ekleyin."
+            },
+            "i9": {
+              "title": "Stok ve hazırlık süresi",
+              "description": "Azami stok ve aşırı satıştan korumak için stoğu sıfırlayan kritik stok seviyesi belirleyin. Yavaş tedarikçilerde hazırlık süresi, Amazon'un izin verdiği ölçüde 30 güne kadar uzatılabilir."
+            },
+            "i10": {
+              "title": "Korunan API kotası",
+              "description": "Fiyat, stok ve hazırlık süresi değişikliklerinin Amazon'a gönderilmeden önce bekleyeceği asgari süreyi seçin. Bu süredeki değişiklikler tek güncellemede birleşir; silme ve durum değişiklikleri her zaman anında gider."
+            },
+            "i11": {
+              "title": "Mağaza bazlı kontrol",
+              "description": "Yukarıdaki her kural pazaryeri bazında ayarlanır; her mağaza kendi stratejisini izleyebilir."
+            }
+          },
+          "steps": {
+            "s1": {
+              "title": "Gerçek maliyet",
+              "description": "Ürün maliyeti, tedarikçi teslimat maliyeti, depo maliyeti, Amazon komisyonu, vergi ve kur birleşerek her ürünün gerçek maliyetini oluşturur."
+            },
+            "s2": {
+              "title": "Marj bandı",
+              "description": "Ürünün maliyet aralığı; minimum, standart ve maksimum kâr yüzdesi olan bir kuralı seçer. Hiçbir aralık uymazsa varsayılan kuralınız geçerli olur."
+            },
+            "s3": {
+              "title": "Rekabet",
+              "description": "Standart fiyatınız Buy Box veya en düşük teklifle karşılaştırılır, eşitlenir veya altına inilir; ancak minimum ve maksimumunuzun dışına çıkmaz."
+            },
+            "s4": {
+              "title": "Amazon güncellenir",
+              "description": "Fiyat, stok ve hazırlık süresi, seçtiğiniz aralıkla toplu olarak Amazon'a gönderilir."
+            }
+          }
+        },
+        "shipping": {
+          "nav": "Kargo Çözümleri",
+          "title": "Kargo Çözümleri",
+          "intro": "SyncroSale siparişlerinizi partner depolara bağlar ve gönderimi Amazon'a bildirir. Paketler, etiketler, mesajlar ve takip, ait oldukları siparişin içinde kalır.",
+          "items": {
+            "i1": {
+              "title": "Partner depolar",
+              "description": "Siparişler, SESA Shipping ve bölgesel partnerler dahil entegre partner depolar üzerinden gönderilir."
+            },
+            "i2": {
+              "title": "Varsayılan kargo servisi",
+              "description": "Yeni gönderilerin varsayılan kullanacağı kargo firmasını ve servisi seçin. Mevcut gönderiler oluşturuldukları servisi korur."
+            },
+            "i3": {
+              "title": "Paket yaşam döngüsü",
+              "description": "Her paketi kayıt bekliyor, kaydedildi, teslim alındı, gönderildi, yolda, teslim edildi, istisna, iade edildi veya iptal edildi aşamalarında izleyin."
+            },
+            "i4": {
+              "title": "Kargo ve iade etiketleri",
+              "description": "Sipariş üzerinden kargo etiketini açın veya yeniden oluşturun; 5 MB'a kadar PDF, JPG veya PNG iade etiketi ekleyin."
+            },
+            "i5": {
+              "title": "Amazon'a ne zaman bildirilir",
+              "description": "Gönderilerin Amazon'da ne zaman onaylanacağını seçin: alıcının siparişi gönderildiğinde veya hazırlık süresi sonunda boş gönderi bilgisiyle ön onay."
+            },
+            "i6": {
+              "title": "Kargo ve takip güncellemesi",
+              "description": "Ön onaylı siparişlerde, sipariş gerçekten gönderilince kargo firması ve takip numarasının Amazon'a işlenip işlenmeyeceğini seçin."
+            },
+            "i7": {
+              "title": "Depo mesajlaşması",
+              "description": "Depoya paket bazında, sık talepler için hazır mesajlarla yazın. Her depo olayı sipariş zaman çizelgesine kaydedilir; tekrarlanan veya sırası bozuk güncellemeler yok sayılır."
+            }
+          },
+          "steps": {
+            "s1": {
+              "title": "Paket kaydedilir",
+              "description": "Sipariş için depoda bir paket kaydı açılır. Kayıt başarısız olursa yeniden deneyebilir veya paketi iptal edebilirsiniz."
+            },
+            "s2": {
+              "title": "Depo teslim alır",
+              "description": "Depo paketin ulaştığını bildirdiğinde sipariş otomatik olarak ilerler."
+            },
+            "s3": {
+              "title": "Depo gönderir",
+              "description": "Paket depodan çıktığında sipariş gönderildi olarak işaretlenir ve etiket sipariş üzerinde görünür."
+            },
+            "s4": {
+              "title": "Amazon onaylanır",
+              "description": "SyncroSale gönderiyi SP-API üzerinden kargo firması ve takip numarasıyla Amazon'da onaylar."
+            }
+          }
+        },
+        "analytics": {
+          "nav": "Analitik & Raporlama",
+          "title": "Analitik ve Raporlama",
+          "intro": "SyncroSale, bir siparişin ne kazanması beklendiğini gerçekte ne kazandığıyla karşılaştırır. Her rakam tahmini, gerçekleşen veya düzenlenen olarak etiketlenir; böylece rakamın ne kadarının gerçek olduğunu her zaman bilirsiniz.",
+          "items": {
+            "i1": {
+              "title": "Sipariş kâr dökümü",
+              "description": "Satış fiyatı, ürün maliyeti, depo maliyeti, Amazon komisyonu, kargo maliyeti, vergi, promosyon indirimi, müşteri iadesi, tedarikçi iadesi ve toplam kâr, satır satır."
+            },
+            "i2": {
+              "title": "Tahmini, gerçekleşen, düzenlenen",
+              "description": "Her satır etiketlidir; tahmini gerçek rakamdan ayırt edebilir, gerektiğinde bir değeri elle düzeltebilirsiniz."
+            },
+            "i3": {
+              "title": "Finansal hareketler",
+              "description": "Beklenen, gerçekleşen, nihai ve fark kutucukları; her kaydın kaynağıyla: sistem, e-posta, rapor veya manuel. İade defteri her iadeyi tahmini veya gerçekleşen olarak listeler."
+            },
+            "i4": {
+              "title": "Sipariş raporu",
+              "description": "Siparişleri tarihe göre filtreleyin; her sipariş için finansal sütunlarla kompakt ve detaylı görünüm arasında geçin."
+            },
+            "i5": {
+              "title": "Gösterge paneli KPI'ları",
+              "description": "Toplam kâr, ciro, sipariş, ortalama sipariş tutarı, başarılı ve iptal edilen siparişler ve iptal talepleri; önceki dönemle karşılaştırmalı."
+            },
+            "i6": {
+              "title": "Gösterge paneli grafikleri",
+              "description": "Zaman içinde sipariş, ciro ve kâr; saate göre siparişler; durum ve bayrağa göre sipariş dağılımı. Bugün, 7 veya 30 gün, bir yıl veya özel aralık seçin."
+            }
+          },
+          "steps": {
+            "s1": {
+              "title": "Tahmin",
+              "description": "Sipariş geldiğinde kâr; satış fiyatı, ürün, depo ve kargo maliyetleriniz, Amazon komisyonu ve vergiden tahmin edilir."
+            },
+            "s2": {
+              "title": "Gerçekleşenler gelir",
+              "description": "Amazon finans verisi, iade e-postaları ve depo maliyetleri geldikçe tahminlerin yerini alır. Komisyon verisinin gelmesi 3 ila 7 gün sürebilir."
+            },
+            "s3": {
+              "title": "Nihai sonuç",
+              "description": "Sipariş nihai kârını ve beklenen ile gerçekleşen değerler arasındaki farkı gösterir."
+            }
+          }
+        }
+      },
+      "visuals": {
+        "pricing": {
+          "cost": "Ürün maliyeti",
+          "min": "Min",
+          "std": "Standart",
+          "max": "Maks",
+          "mode1": "Akıllı fiyatlama",
+          "mode3": "Aktarımdan sonra güncelleme yok",
+          "default": "Varsayılan"
+        },
+        "shipping": {
+          "s1": "Sipariş alındı",
+          "s2": "Hazırlık süresi",
+          "s3": "Depodan gönderildi",
+          "s4": "Takip Amazon'a iletildi",
+          "s5": "Teslim edildi"
+        },
+        "analytics": {
+          "sale": "Satış fiyatı",
+          "fees": "Amazon ücretleri",
+          "cost": "Ürün maliyeti",
+          "shipping": "Kargo",
+          "refunds": "İadeler",
+          "estimated": "Tahmini kâr",
+          "actual": "Gerçekleşen kâr"
+        }
+      },
+      "data": {
+        "title": "Verileriniz, sizin izninizle",
+        "description": "SyncroSale, Amazon hesabınıza yalnızca Selling Partner API üzerinden verdiğiniz açık yetkiyle erişir. Erişimi istediğiniz zaman Seller Central'dan kaldırabilirsiniz. Satıcı verileri Amazon'un Kabul Edilebilir Kullanım Politikası ve Veri Koruma Politikası'na uygun işlenir.",
+        "privacy": "Gizlilik Politikası",
+        "dpa": "Veri İşleme Eki"
+      },
+      "cta": {
+        "title": "Bugün Ölçeklenmeye Başlayın",
+        "subtitle": "Erken kullanıcılara katılın ve Amazon operasyonlarınızı otomatikleştirin.",
+        "button": "Erken Erişim Talep Et"
+      },
+      "labels": {
+        "how": "Nasıl çalışır",
+        "can": "Neler yapabilirsiniz"
+      }
+    },
+    "pricing": {
+      "hero": {
+        "title": "Amazon Operasyonlarını Uçtan Uca Otomatikleştir",
+        "subtitle": "SyncroSale satın alma, depo yönetimi ve kâr takibini yönetir — sen sadece ölçeklemeye odaklan."
+      },
+      "features": [
+        "Gerçek kârı anlık takip et",
+        "Sipariş ve satın alma sürecini otomatikleştir",
+        "Depo süreçlerini yönet",
+        "Operasyonel karmaşa olmadan büyü"
+      ],
+      "plan": {
+        "title": "Ücretsiz Deneme",
+        "price": "Ücretsiz",
+        "description": "SyncroSale’e erken erişim elde et ve Amazon operasyonlarını otomatikleştirmeye başla.",
+        "features": [
+          "Gerçek zamanlı kâr takibi (Actual vs Estimated)",
+          "Otomatik satın alma ve checkout",
+          "Depo ve sipariş yaşam döngüsü takibi",
+          "Amazon entegrasyonu hazır"
+        ],
+        "cta": "Erken Erişim Talep Et"
+      },
+      "trust": "Modern Amazon satıcıları için: netlik, otomasyon ve ölçeklenebilirlik."
+    },
     "error": {
-      "title": "Bir şeyler ters gitti",
-      "subtitle": "Aradığınız sayfa mevcut değil veya beklenmeyen bir hata oluştu.",
+      "title": "Sayfa Bulunamadı",
+      "subtitle": "Aradığınız sayfa mevcut değil veya taşınmış olabilir.",
       "goHome": "Ana Sayfaya Dön"
     }
   },
-  "languages": {
-    "english": "İngilizce",
-    "turkish": "Türkçe"
-  },
-  "changeLanguage": "Dili Değiştir",
-  "hello": "Merhaba",
-  "buttons": {
-    "close": "Kapat",
-    "open": "Aç"
-  },
   "navigation": {
     "homepage": "Ana Sayfa",
-    "pricing": "Fiyatlandırma",
+    "pricing": "Erken Erişim",
     "contact": "İletişim",
-    "documentation": "Dokümantasyon",
-    "faq": "SSS",
-    "privacyPolicy": "Gizlilik Politikası",
-    "cookies": "Çerezler",
-    "dpa": "Veri İşleme Sözleşmesi"
+    "privacyPolicy": "Gizlilik",
+    "features": "Özellikler",
+    "cookies": "Çerez Politikası",
+    "dpa": "Veri İşleme Sözleşmesi",
+    "support": "Destek",
+    "security": "Güvenlik"
   },
   "footer": {
-    "allRightsReserved": "© {{year}} Syncrosale. Tüm hakları saklıdır."
+    "allRightsReserved": "© {{year}} Syncrosale. Tüm hakları saklıdır.",
+    "company": "Syncrosale, SESA Shipping LLC tarafından işletilen bir yazılım platformudur."
   }
 }
