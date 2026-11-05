@@ -1,57 +1,85 @@
+import type { SvgIconComponent } from "@mui/icons-material";
+import FilterAltOutlinedIcon from "@mui/icons-material/FilterAltOutlined";
+import Inventory2OutlinedIcon from "@mui/icons-material/Inventory2Outlined";
+import ShieldOutlinedIcon from "@mui/icons-material/ShieldOutlined";
+import PublicOutlinedIcon from "@mui/icons-material/PublicOutlined";
+import ReceiptLongOutlinedIcon from "@mui/icons-material/ReceiptLongOutlined";
+import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
+import PercentOutlinedIcon from "@mui/icons-material/PercentOutlined";
+import CompareArrowsOutlinedIcon from "@mui/icons-material/CompareArrowsOutlined";
+import BlockOutlinedIcon from "@mui/icons-material/BlockOutlined";
+import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
+import TuneOutlinedIcon from "@mui/icons-material/TuneOutlined";
+import SyncOutlinedIcon from "@mui/icons-material/SyncOutlined";
+import WarehouseOutlinedIcon from "@mui/icons-material/WarehouseOutlined";
+import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
+import TaskAltOutlinedIcon from "@mui/icons-material/TaskAltOutlined";
+import QrCode2OutlinedIcon from "@mui/icons-material/QrCode2Outlined";
+import TravelExploreOutlinedIcon from "@mui/icons-material/TravelExploreOutlined";
+import QueryStatsOutlinedIcon from "@mui/icons-material/QueryStatsOutlined";
+import ReplayOutlinedIcon from "@mui/icons-material/ReplayOutlined";
+import DashboardOutlinedIcon from "@mui/icons-material/DashboardOutlined";
+
 import imDark from "../../assets/images/im-dark.png";
 import imLight from "../../assets/images/im-light.png";
-
 import otDark from "../../assets/images/ot-dark.png";
 import otLight from "../../assets/images/ot-light.png";
 
-import as1Dark from "../../assets/images/as-1-dark.png";
-import as2Dark from "../../assets/images/as-2-dark.png";
-import as3Dark from "../../assets/images/as-3-dark.png";
-import as4Dark from "../../assets/images/as-4-dark.png";
-import as5Dark from "../../assets/images/as-5-dark.png";
-import as6Dark from "../../assets/images/as-6-dark.png";
+export type SectionKey = "listing" | "pricing" | "shipping" | "analytics";
 
-import as1Light from "../../assets/images/as-1-light.png";
-import as2Light from "../../assets/images/as-2-light.png";
-import as3Light from "../../assets/images/as-3-light.png";
-import as4Light from "../../assets/images/as-4-light.png";
-import as5Light from "../../assets/images/as-5-light.png";
-import as6Light from "../../assets/images/as-6-light.png";
+export type FeatureSection = {
+  key: SectionKey;
+  icons: SvgIconComponent[];
+  /** Screenshots shown next to the section (dark / light). */
+  images?: { dark: string[]; light: string[] };
+};
 
-export const features: Feature[] = [
+/** Number of capability cards and "how it works" steps per section (must match the locale files). */
+export const counts: Record<SectionKey, { items: number; steps: number }> = {
+  listing: { items: 13, steps: 4 },
+  pricing: { items: 11, steps: 4 },
+  shipping: { items: 7, steps: 4 },
+  analytics: { items: 6, steps: 3 },
+};
+
+export const sections: FeatureSection[] = [
   {
-    key: "inventory",
-    images: {
-      dark: [imDark],
-      light: [imLight],
-    },
+    key: "listing",
+    icons: [
+      FilterAltOutlinedIcon,
+      Inventory2OutlinedIcon,
+      ShieldOutlinedIcon,
+      PublicOutlinedIcon,
+      ReceiptLongOutlinedIcon,
+      DescriptionOutlinedIcon,
+    ],
+    images: { dark: [imDark, otDark], light: [imLight, otLight] },
   },
   {
-    key: "search",
-    images: {
-      dark: [as1Dark, as2Dark, as3Dark, as4Dark, as5Dark, as6Dark],
-      light: [as1Light, as2Light, as3Light, as4Light, as5Light, as6Light],
-    },
+    key: "pricing",
+    icons: [
+      PercentOutlinedIcon,
+      CompareArrowsOutlinedIcon,
+      BlockOutlinedIcon,
+      PersonOutlineOutlinedIcon,
+      EmojiEventsOutlinedIcon,
+      TuneOutlinedIcon,
+      SyncOutlinedIcon,
+    ],
   },
   {
-    key: "orders",
-    images: {
-      dark: [otDark],
-      light: [otLight],
-    },
+    key: "shipping",
+    icons: [
+      WarehouseOutlinedIcon,
+      LocalShippingOutlinedIcon,
+      TaskAltOutlinedIcon,
+      QrCode2OutlinedIcon,
+      TravelExploreOutlinedIcon,
+    ],
   },
   {
-    key: "upload",
+    key: "analytics",
+    icons: [QueryStatsOutlinedIcon, ReplayOutlinedIcon, DashboardOutlinedIcon],
   },
 ];
-export type FeatureKey = "inventory" | "search" | "orders" | "upload";
-
-export type FeatureImages = {
-  dark: string[];
-  light: string[];
-};
-
-export type Feature = {
-  key: FeatureKey;
-  images?: FeatureImages;
-};

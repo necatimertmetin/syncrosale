@@ -33,6 +33,20 @@ export const Routes: AppRoute[] = [
     visibleOnFooter: false,
   },
   {
+    path: "features/:section",
+    element: <Features />,
+    label: "navigation.features",
+    visibleOnHeader: false,
+    visibleOnFooter: false,
+  },
+  {
+    path: "features/:section/:item",
+    element: <Features />,
+    label: "navigation.features",
+    visibleOnHeader: false,
+    visibleOnFooter: false,
+  },
+  {
     path: "pricing",
     element: <Pricing />,
     label: "navigation.pricing",

@@ -89,32 +89,299 @@
     },
     "features": {
       "hero": {
-        "title": "Built for Amazon Operators",
-        "subtitle": "Manage purchasing, profit tracking, and warehouse operations in one unified platform.",
-        "cta": "Request Early Access"
+        "title": "Built for Amazon Sellers",
+        "subtitle": "SyncroSale connects to your Amazon store through the Selling Partner API (SP-API) to manage listings, inventory, orders, pricing, shipping and profit analysis in one place.",
+        "cta": "Request Early Access",
+        "badge": "Connected via Amazon SP-API"
       },
-      "items": {
-        "inventory": {
-          "title": "Inventory Management",
-          "description": "SyncroSale enables you to manage your store inventory quickly and efficiently. With advanced filtering, you can easily list products by brand, category, price, and stock range. Perform bulk actions to manage products at scale, remove items from specific categories, or organize them into custom lists. Set pricing and stock rules to automate your workflows. Access all product details — including images, titles, prices, stock, and brand — from a single dashboard."
+      "example": "Illustrative example",
+      "sections": {
+        "listing": {
+          "nav": "Listings, Inventory & Orders",
+          "title": "Listing, Inventory & Order Management",
+          "intro": "SyncroSale turns your Amazon store into a managed pipeline. You decide which products are allowed in. SyncroSale discovers them, checks them against your rules, lists them and keeps them in order, then follows every order from purchase to delivery.",
+          "items": {
+            "i1": {
+              "title": "Inventory by stage",
+              "description": "See every product by where it is in the pipeline: discovery, filtering, pending approval, importing to Amazon, active, inactive, incomplete and deleted. Nothing disappears without a status."
+            },
+            "i2": {
+              "title": "Filters and saved views",
+              "description": "Filter by Buy Box and competition data, sales rank, seller counts, price and margin gaps, stock, dates, profit and more. Save any filter set as its own tab."
+            },
+            "i3": {
+              "title": "Clear out-of-criteria reasons",
+              "description": "Every rejected product tells you why: restricted brand, keyword, category or ASIN, no sales rank, unavailable in the source marketplace, an FBA or Amazon seller present, or too few or too many sellers."
+            },
+            "i4": {
+              "title": "Restrictions and blocked ASINs",
+              "description": "Maintain lists of restricted brands, keywords, categories and ASINs. A global blocked ASIN list is kept per marketplace."
+            },
+            "i5": {
+              "title": "Policy-warning protection",
+              "description": "Choose what happens when Amazon sends a policy warning, a product safety notice or a case closure notice: do nothing, remove from inventory, remove and block the product, or remove and block the product and its brand."
+            },
+            "i6": {
+              "title": "Creation and removal rules",
+              "description": "Decide whether new products are never added without approval, need your approval, or are added automatically when they meet your filters. Decide whether products that stop meeting your criteria are kept or removed."
+            },
+            "i7": {
+              "title": "Bulk actions and import tracking",
+              "description": "Add or delete up to 5,000 products by ASIN or SKU in one action. The import tracker shows each batch, the result per ASIN and the drop reason."
+            },
+            "i8": {
+              "title": "Price history",
+              "description": "Review every price change in a table, ledger or audit log, with the cost breakdown, commission, tax, exchange rate, handling time, margins and the Buy Box and lowest offers behind it."
+            },
+            "i9": {
+              "title": "Multiple marketplaces",
+              "description": "Connect each Amazon marketplace separately through SP-API authorization. Every store keeps its own filters and settings, and an expired authorization can be renewed in one step."
+            },
+            "i10": {
+              "title": "Order list that fits real work",
+              "description": "Tabs for all orders, pending actions, orders to be purchased and delayed orders. Create colored flags, and search by buyer, date, ASIN, tracking number, status, notes or days since purchase."
+            },
+            "i11": {
+              "title": "Everything about an order in one place",
+              "description": "Delivery address, items, supply orders, notes, warehouse packages and an event timeline you can filter by who caused the event: you, Amazon, a seller e-mail, the warehouse or the system."
+            },
+            "i12": {
+              "title": "Notifications and e-mail matched to orders",
+              "description": "Order, shipping, cancellation, return and refund messages from Amazon and your buyer mailbox are read and matched to the right order. Anything unmatched waits in an unprocessed inbox so nothing is lost."
+            },
+            "i13": {
+              "title": "Customer invoices",
+              "description": "Edit and preview an invoice, choose a template and language, adjust items, VAT rate and notes, then print or save it as PDF. Your seller address and logo are set once in store settings."
+            }
+          },
+          "steps": {
+            "s1": {
+              "title": "Add products",
+              "description": "Add ASINs to your store, up to 5,000 at a time, with an optional SKU prefix."
+            },
+            "s2": {
+              "title": "Discovery",
+              "description": "SyncroSale collects Amazon data for each ASIN. Products that cannot be found are reported together with the reason."
+            },
+            "s3": {
+              "title": "Filtering",
+              "description": "Your filters and restrictions are applied. Products that fail go to Out of Criteria with the exact reason, the rest move on."
+            },
+            "s4": {
+              "title": "Listing",
+              "description": "Depending on your setting, products are added automatically, or wait in Pending Approval until you approve selected or all of them."
+            }
+          }
         },
-        "search": {
-          "title": "Advanced Search Console",
-          "description": "Find the products you need in seconds with SyncroSale’s user-friendly search console. Narrow down results using detailed filters and quickly identify the right products. Gain insights through stock levels, performance metrics, and trends. With order-based filtering and smart notifications, you can instantly detect and process incoming orders without missing anything."
+        "pricing": {
+          "nav": "Automated Pricing",
+          "title": "Automated Pricing",
+          "intro": "Pricing in SyncroSale is a set of rules that you control. For every product it works out a price band, moves the price inside that band according to the competition, and sends the result to Amazon together with stock and handling time.",
+          "items": {
+            "i1": {
+              "title": "Profit rules by cost range",
+              "description": "Create as many cost ranges as you need. Each one has its own minimum, standard and maximum profit percentage, and a default row covers everything else."
+            },
+            "i2": {
+              "title": "Buy Box or lowest price",
+              "description": "Choose which offer your price is compared with. You can match it, or undercut it by a value you set. An unusually large undercut triggers a warning before you save."
+            },
+            "i3": {
+              "title": "Buy Box eligibility check",
+              "description": "Compete only with sellers who are actually eligible to win the Buy Box, instead of every offer on the listing."
+            },
+            "i4": {
+              "title": "Ignore list",
+              "description": "Add seller IDs you do not want to compete with. They stop influencing your prices."
+            },
+            "i5": {
+              "title": "Sole-seller margin",
+              "description": "When nobody else sells a product, SyncroSale prices at your maximum plus an extra percentage that you choose."
+            },
+            "i6": {
+              "title": "No-Buy-Box fallback",
+              "description": "Pick the minimum, standard or maximum price to use when a listing currently has no Buy Box seller."
+            },
+            "i7": {
+              "title": "You choose how prices are applied",
+              "description": "Keep prices continuously updated by smart pricing, or stop price updates after the initial import."
+            },
+            "i8": {
+              "title": "Currency, tax and commission",
+              "description": "Use an automatic or a manual exchange rate, set your Amazon commission rate, and add a tax rule as an extra percentage plus a fixed amount where it applies."
+            },
+            "i9": {
+              "title": "Stock and handling time",
+              "description": "Set a maximum stock and a critical stock level that resets stock to zero to protect you from overselling. For slow suppliers, handling time can be extended as far as Amazon allows, up to 30 days."
+            },
+            "i10": {
+              "title": "Protected API quota",
+              "description": "Choose a minimum wait before price, stock and handling changes are sent to Amazon. Changes inside that window are combined into one update, while deletions and status changes are always sent immediately."
+            },
+            "i11": {
+              "title": "Per-store control",
+              "description": "Every rule above is set per marketplace, so each store can follow its own strategy."
+            }
+          },
+          "steps": {
+            "s1": {
+              "title": "True cost",
+              "description": "Product cost, supplier delivery cost, warehouse cost, Amazon commission, tax and exchange rate are combined into the real cost of each product."
+            },
+            "s2": {
+              "title": "Margin band",
+              "description": "The product's cost range selects a rule with a minimum, standard and maximum profit percentage. If no range matches, your default rule applies."
+            },
+            "s3": {
+              "title": "Competition",
+              "description": "Your standard price is compared with the Buy Box or lowest offer and matched or undercut, but it never leaves your minimum and maximum."
+            },
+            "s4": {
+              "title": "Update Amazon",
+              "description": "Price, stock and handling time are sent to Amazon, batched at the interval you choose."
+            }
+          }
         },
-        "orders": {
-          "title": "Order Tracking",
-          "description": "SyncroSale allows you to track every order end-to-end. Instantly see when an order is delivered or returned for any reason. The system automatically detects failed deliveries and notifies you, ensuring full control over your operations. Delivery times are recorded, and optional notifications keep you updated at every stage."
+        "shipping": {
+          "nav": "Shipping Solutions",
+          "title": "Shipping Solutions",
+          "intro": "SyncroSale connects your orders to partner warehouses and reports the shipment back to Amazon. Packages, labels, messages and tracking stay attached to the order they belong to.",
+          "items": {
+            "i1": {
+              "title": "Partner warehouses",
+              "description": "Orders are fulfilled through integrated partner warehouses, including SESA Shipping and regional partners."
+            },
+            "i2": {
+              "title": "Default carrier service",
+              "description": "Choose the carrier and service that new shipments use by default. Existing shipments keep the service they were created with."
+            },
+            "i3": {
+              "title": "Package lifecycle",
+              "description": "Follow each package through pending registration, registered, received, shipped, in transit, delivered, exception, returned or cancelled."
+            },
+            "i4": {
+              "title": "Shipping and return labels",
+              "description": "Open or recreate a shipping label from the order, and attach a return label as PDF, JPG or PNG up to 5 MB."
+            },
+            "i5": {
+              "title": "When Amazon is told",
+              "description": "Choose when shipments are confirmed on Amazon: when the buyer's order is shipped, or pre-confirmed with empty shipment details at the end of the handling time."
+            },
+            "i6": {
+              "title": "Carrier and tracking update",
+              "description": "For pre-confirmed orders, choose whether the carrier and tracking number are filled in on Amazon once the order really ships, or left as they are."
+            },
+            "i7": {
+              "title": "Warehouse messaging",
+              "description": "Send messages to the warehouse per package, with quick messages for common requests. Every warehouse event is recorded on the order timeline, and repeated or out-of-order updates are ignored."
+            }
+          },
+          "steps": {
+            "s1": {
+              "title": "Package registered",
+              "description": "A package is registered with the warehouse for the order. If registration fails you can retry it or cancel the package."
+            },
+            "s2": {
+              "title": "Warehouse receives",
+              "description": "When the warehouse reports that the package arrived, the order moves forward automatically."
+            },
+            "s3": {
+              "title": "Warehouse ships",
+              "description": "When the package leaves the warehouse, the order is marked as shipped and the label is available on the order."
+            },
+            "s4": {
+              "title": "Amazon is confirmed",
+              "description": "SyncroSale confirms the shipment on Amazon through SP-API with the carrier and tracking number."
+            }
+          }
         },
-        "upload": {
-          "title": "Product Upload Automation",
-          "description": "Automate your product listing process with SyncroSale. Add products directly to your store without downloading or uploading files. Products are processed within the system, optimized based on your pricing and stock rules, and pushed to your store ready for sale. All operations are handled via API integration, saving time and reducing manual work."
+        "analytics": {
+          "nav": "Analytics & Reporting",
+          "title": "Analytics & Reporting",
+          "intro": "SyncroSale compares what an order was expected to earn with what it actually earned. Every figure is labeled as estimated, actual or overridden, so you always know how much of the number is real.",
+          "items": {
+            "i1": {
+              "title": "Order profit breakdown",
+              "description": "Sale price, product cost, warehouse cost, Amazon commission, shipping cost, tax, promotion discount, customer refund, supplier refund and total profit, line by line."
+            },
+            "i2": {
+              "title": "Estimated, actual, overridden",
+              "description": "Each line is tagged so you can tell a prediction from a real figure, and adjust a value manually when needed."
+            },
+            "i3": {
+              "title": "Financial activity",
+              "description": "Expected, realized, final and variance tiles, with the source of each entry: system, mail, report or manual. A refund ledger lists each refund as estimated or realized."
+            },
+            "i4": {
+              "title": "Orders report",
+              "description": "Filter orders by date and switch between a compact and a detailed view with the financial columns for every order."
+            },
+            "i5": {
+              "title": "Dashboard KPIs",
+              "description": "Total profit, revenue, orders, average order value, successful and cancelled orders and cancellation requests, compared with the previous period."
+            },
+            "i6": {
+              "title": "Dashboard charts",
+              "description": "Orders, revenue and profit over time, orders by hour of day, and the distribution of orders by status and flag. Choose today, 7 or 30 days, a year, or a custom range."
+            }
+          },
+          "steps": {
+            "s1": {
+              "title": "Estimate",
+              "description": "When an order arrives, profit is estimated from the sale price, your product, warehouse and shipping costs, Amazon commission and tax."
+            },
+            "s2": {
+              "title": "Actuals arrive",
+              "description": "Amazon financial data, refund e-mails and warehouse costs replace estimates as they come in. Commission data can take 3 to 7 days to arrive."
+            },
+            "s3": {
+              "title": "Final result",
+              "description": "The order shows its final profit, and the difference between expected and realized values."
+            }
+          }
         }
+      },
+      "visuals": {
+        "pricing": {
+          "cost": "Product cost",
+          "min": "Min",
+          "std": "Standard",
+          "max": "Max",
+          "mode1": "Smart pricing",
+          "mode3": "No updates after import",
+          "default": "Default"
+        },
+        "shipping": {
+          "s1": "Order received",
+          "s2": "Handling time",
+          "s3": "Shipped from warehouse",
+          "s4": "Tracking sent to Amazon",
+          "s5": "Delivered"
+        },
+        "analytics": {
+          "sale": "Sale price",
+          "fees": "Amazon fees",
+          "cost": "Product cost",
+          "shipping": "Shipping",
+          "refunds": "Refunds",
+          "estimated": "Estimated profit",
+          "actual": "Actual profit"
+        }
+      },
+      "data": {
+        "title": "Your data, with your permission",
+        "description": "SyncroSale accesses your Amazon account only after your explicit authorization through the Selling Partner API. You can revoke access at any time from Seller Central. Seller data is handled in accordance with Amazon's Acceptable Use Policy and Data Protection Policy.",
+        "privacy": "Privacy Policy",
+        "dpa": "Data Processing Addendum"
       },
       "cta": {
         "title": "Start Scaling Today",
         "subtitle": "Join early users and automate your Amazon operations.",
         "button": "Request Early Access"
+      },
+      "labels": {
+        "how": "How it works",
+        "can": "What you can do"
       }
     },
     "pricing": {
